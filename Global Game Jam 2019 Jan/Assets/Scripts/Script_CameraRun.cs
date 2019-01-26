@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Script_CameraRun : MonoBehaviour {
-    public Transform MainCamera;
+    public Transform player;
 
-    // Use this for initialization
-
-    // Update is called once per frame
+    //Once a frame...
     void Update()
     {
-        transform.position = new Vector3(MainCamera.position.x + 0.1f, 0, -10);
+        // ...track player location, with constant y and z values.
+        transform.position = new Vector3(player.position.x + 4f, 0, -10);
     }
 }

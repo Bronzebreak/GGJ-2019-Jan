@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     //Action Restrictions
     private bool canJump;
     public bool safeZone = false;
+    public Script_RandomObstacle spawnReference;
 
     /*  Animation Notes
     Variables:
@@ -81,10 +82,13 @@ public class Player : MonoBehaviour
         }
     }
 
+    //Once you collide with a trigger...
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // ...if it has 'home' in its name...
         if (collision.gameObject.name.ToLower().Contains("home"))
         {
+            // ...player is in a safe zone...
             safeZone = true;
         }
     }
