@@ -15,4 +15,4 @@ MonoBehaviour:
   score: 900
   discripition: A vase with a makeshift lid, you hope Grandpa is happy with where
     you put him
-  itemPic: {fileID: 0}
+  itemPic: {fileID: 21300000, guid: 63bba2f3b32a79c46a207d9f33e2b542, type: 3}
