@@ -351,7 +351,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1774824220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.95, y: 0.82, z: 0}
+  m_LocalPosition: {x: -2, y: 1.23, z: 0}
   m_LocalScale: {x: 17.505814, y: 12.718319, z: 5.4995}
   m_Children: []
   m_Father: {fileID: 0}
@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 1899736944}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -571,4 +571,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
