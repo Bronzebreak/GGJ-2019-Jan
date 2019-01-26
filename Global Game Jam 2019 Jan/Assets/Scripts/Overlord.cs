@@ -5,13 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Overlord : MonoBehaviour
 {
-
-    //Calculated current angle of building in relation to map/background. If it hits ~45* or -45*, gameOver should occur.
-    public float angleRotation = 0.0f;
-    public float timer;
-    public float secondTimer;
-    public string scene;
-    bool tiltingRight;
+    public float score;
 
     // Use this for initialization
     void Start ()
@@ -22,56 +16,20 @@ public class Overlord : MonoBehaviour
     //Once a frame...
     private void Update()
     {
-        // ...count up time.
-        secondTimer += Time.deltaTime;
+        score += Time.deltaTime;
+        print("Score: " + score);
 
-        // ... then, if ~1s of time has surpassed...
-        if (secondTimer >= 1)
-        {
-            // ...if tilting to the right...
-            if (tiltingRight == true)
-            {
-                // ...time remaining is equal to the difference between 45 and the current rotation.
-                timer = 45 - angleRotation;
-            }
-
-            // ...if tilting to the left...
-            if (tiltingRight == false)
-            {
-                // ...time remaining is equal to the difference between -45 and the current rotation.
-                timer = -45 + angleRotation;
-            }
-
-            // ...then print timer...
-            print (timer);
-
-            // ...then reset timer.
-            secondTimer = 0;
-        }
-        
-        
-       
-
-        
-
-        
-
-    }
-
-    //Multiple times a frame...
-    void FixedUpdate()
-    {
         // ...if Esc is pressed...
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            // ...execute 'Quit' function.
+            // ...execute quitting function.
             QuitGame();
         }
 
         // ...if R is pressed...
         if (Input.GetKeyDown(KeyCode.R))
         {
-            // ...execute 'RestartLevel' function.
+            // ...execute restarting function.
             RestartGame();
         }
     }
@@ -80,7 +38,7 @@ public class Overlord : MonoBehaviour
     public void RestartGame()
     {
         // ...load scene of publicly set name 'scene'.
-        SceneManager.LoadScene(scene);
+        SceneManager.LoadScene("Derek");
     }
 
     //When function is called...
