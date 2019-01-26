@@ -1,28 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Destroy_prefabs : MonoBehaviour
 {
     //Variables
     public GameObject floor;
+    public string levelToLoad;
     
-	void Start ()
-    {
-	
-	}
-	
-	
-	void Update ()
-    {
-    
-	}
 
-    private void OnTriggerEnter2D(Collider2D obj)
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        if (obj.gameObject.tag == "Old_floor")
+        if (other.tag == "Player")
         {
-            Destroy(this.gameObject);
+            SceneManager .LoadScene(levelToLoad);
+        }
+
+        if (other.gameObject.transform.parent)
+        {
+            Destroy(other.gameObject.transform.parent.gameObject);
+        }
+        else
+        {
+            Destroy(other.gameObject);
         }
     }
 }
