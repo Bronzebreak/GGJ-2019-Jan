@@ -7,14 +7,14 @@ public class Overlord : MonoBehaviour
 {
 
     //Calculated current angle of building in relation to map/background. If it hits ~45* or -45*, gameOver should occur.
-    public int angleRotation = 0;
+    public float angleRotation = 0.0f;
     public float timer;
     public float secondTimer;
     public string scene;
     bool tiltingRight;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
 		
 	}
@@ -25,7 +25,7 @@ public class Overlord : MonoBehaviour
         // ...count up time.
         secondTimer += Time.deltaTime;
 
-        // ...if ~1s of time has surpassed...
+        // ... then, if ~1s of time has surpassed...
         if (secondTimer >= 1)
         {
             // ...if tilting to the right...
@@ -48,7 +48,7 @@ public class Overlord : MonoBehaviour
             // ...then reset timer.
             secondTimer = 0;
         }
-
+        
         
        
 
