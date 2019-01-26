@@ -6,18 +6,20 @@ using UnityEngine.SceneManagement;
 public class Overlord : MonoBehaviour
 {
     public float score;
-
-    // Use this for initialization
-    void Start ()
-    {
-		
-	}
+    public Player playerRef;
 
     //Once a frame...
     private void Update()
     {
-        score += Time.deltaTime;
-        print("Score: " + score);
+        // ...as long as the player isn't in a safe zone...
+        if (playerRef.safeZone == false)
+        {
+            // ...increase score in accordance with the difference in time between frames...
+            score += Time.deltaTime;
+
+            // ...and then print the score -multiplied by 100- to the nearest whole number.
+            print("Score: " + (int)(score * 100));
+        }
 
         // ...if Esc is pressed...
         if (Input.GetKeyDown(KeyCode.Escape))
