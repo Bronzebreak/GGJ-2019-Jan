@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     #region Variables
     //Externally Referenced Variables
     private Rigidbody2D rigBody;
+    public Overlord overlordReference;
+    public Spawner spawnReference;
 
     //Action Variables
     public KeyCode moveRight;
@@ -17,7 +19,6 @@ public class Player : MonoBehaviour
     //Action Restrictions
     private bool canJump;
     public bool safeZone = false;
-    public Spawner spawnReference;
 
     /*  Animation Notes
     Variables:
@@ -90,6 +91,13 @@ public class Player : MonoBehaviour
         {
             // ...player is in a safe zone...
             safeZone = true;
+        }
+
+        // ...if it is a collectible...
+        if (collision.tag == "Collectible")
+        {
+            overlordReference.score += 1000;
+            Destroy(collision.gameObject);
         }
     }
 
