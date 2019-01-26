@@ -15,4 +15,4 @@ MonoBehaviour:
   score: 900
   discripition: ' A photograph of a couple of cats, a warm feel starts whenever you
     look at it'
-  itemPic: {fileID: 0}
+  itemPic: {fileID: 21300000, guid: 75f24dac3f8860e499b64ad6e479e1cc, type: 3}
