@@ -1,16 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Final_time_display : MonoBehaviour {
+public class Final_time_display : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public Text finalTimeText;
+    public float tiltRate;
+    public int finalTime;
+
 	
-	// Update is called once per frame
-	void Update () {
-		
+
+	void Update ()
+    {
+        if (tiltRate <= 0)
+        {
+            finalTimeText.text = "finalTime";
+        }
+
 	}
 }
