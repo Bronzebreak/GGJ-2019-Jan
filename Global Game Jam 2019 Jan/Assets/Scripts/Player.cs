@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     //Action Restrictions
     private bool canJump;
     public bool safeZone = false;
-    public Script_RandomObstacle spawnReference;
+    public Spawner spawnReference;
 
     /*  Animation Notes
     Variables:

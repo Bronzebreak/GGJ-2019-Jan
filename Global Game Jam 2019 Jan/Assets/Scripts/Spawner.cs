@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Script_RandomObstacle : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
     public GameObject[] obstacle;
     public float spawnMin = 1.0f;
     public float spawnMax = 3.0f;
     public Player playerRef;
-    // Use this for initialization
+
+    //Upon initialization...
     void Start()
     {
+        // ...begin 'Spawn' function.
         Spawn();
     }
     

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Script_CameraRun : MonoBehaviour {
+public class TrackCamera : MonoBehaviour {
     public Transform player;
 
     //Once a frame...
