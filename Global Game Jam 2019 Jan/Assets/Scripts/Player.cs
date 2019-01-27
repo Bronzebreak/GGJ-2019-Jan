@@ -37,8 +37,7 @@ public class Player : MonoBehaviour
         rigBody = GetComponent<Rigidbody2D>();
     }
 
-    //Multiple times a frame...
-    void FixedUpdate()
+    private void Update()
     {
         #region Jump
         //If player is allowed to jump...
@@ -48,14 +47,18 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 //...the character applies a force impulse to the vertical axis...
-                rigBody.AddForce(new Vector2(0, 5.0f), ForceMode2D.Impulse);
+                rigBody.AddForce(new Vector2(0, 50f), ForceMode2D.Impulse);
 
                 //... and the player can no longer jump.
                 canJump = false;
             }
         }
         #endregion
+    }
 
+    //Multiple times a frame...
+    void FixedUpdate()
+    {
         #region Movement
         if (safeZone)
         {
@@ -63,7 +66,7 @@ public class Player : MonoBehaviour
             float moveHori = Input.GetAxis(horizontalAxis);
 
             // ...then, move horizontally based on the horizontal input; do NOT affect vertical movement.
-            rigBody.velocity = new Vector2(moveHori * 5.0f, rigBody.velocity.y);
+            rigBody.velocity = new Vector2(moveHori * 3.75f, rigBody.velocity.y);
         }
         else
         {
@@ -73,7 +76,7 @@ public class Player : MonoBehaviour
     }
 
     //Upon collision with an object...
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         // ...if object's name contains 'ground'
         if (collision.gameObject.name.ToLower().Contains("ground"))
