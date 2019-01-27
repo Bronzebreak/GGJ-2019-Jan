@@ -2,37 +2,62 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AndrewOverlord : MonoBehaviour {
-    public playertest playerRefTest;
-    int i = 0;
-    public GameObject[] obj;
 
-	// Use this for initialization
-	void Start () {
+public class AndrewOverlord : MonoBehaviour
+{
+    //Player reference
+    public playertest playerRefTest;
+    public GameObject cameraRefTest;
+    public GameObject itemsRefTest;
+    //Index for spawn list
+    int b = 0;
+    //List length
+    int listLength;
+    //Array with game objects 
+    public GameObject[] obj;
+    public List<GameObject> collectiblesList;
+    // Use this for initialization
+    void Start ()
+    {
+
 	}
+    //checks if item is in the list and array...
 	public void CheckItem()
     {
-        foreach (GameObject trig in obj)
+        for(int i = 0; i < obj.Length; i++)
         {
-
-            if (trig.gameObject.name == obj[i].name)
+            //goes through all elements of the array and list.
+            b=i; 
+            if (playerRefTest.itemName == obj[i].name)
             {
-                
-                obj[i].gameObject.SetActive(true); 
+                //If object is in the array set it active
+                obj[i].gameObject.SetActive(true);
+                //Empties the list element so it doesnt spawn again
+                collectiblesList[b] = null;
             }
             else
             {
-                i++;
-                CheckItem();
+                b = i;  
             }
         }
     }
 	// Update is called once per frame
 	void Update ()
     {
-		if (i >= (obj.Length - 1))
+        //sets varieable to list length
+        listLength = collectiblesList.Count;
+        //If index goes out of range sets it to 0
+        if (b >= (listLength - 1))
         {
-            i = 0;
+            b = 0;
         }
-	}
+        if (Input.GetKey(KeyCode.F))
+        {
+            itemsRefTest.transform.parent = playerRefTest.transform;
+        }
+        if (Input.GetKey(KeyCode.E))
+        {
+            itemsRefTest.transform.parent = null;
+        }
+    }
 }

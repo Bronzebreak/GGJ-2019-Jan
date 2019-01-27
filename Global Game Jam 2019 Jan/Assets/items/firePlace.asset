@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f685f40f3ffa61b4eaf777cf17feaf5c, type: 3}
-  m_Name: chinaCabinet
+  m_Name: firePlace
   m_EditorClassIdentifier: 
-  itemsName: China cabinet
+  itemsName: fire place
   score: 900
-  discripition: A cabinet full of old china, your family has had it for a long time
-  itemPic: {fileID: 0}
+  discripition: A wood fire place, it;s warm and smells nice
+  itemPic: {fileID: 21300000, guid: 1414481480bdad04eb2e0a5b64ead7bd, type: 3}

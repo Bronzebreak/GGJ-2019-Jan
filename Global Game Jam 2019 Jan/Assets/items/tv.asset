@@ -14,4 +14,4 @@ MonoBehaviour:
   itemsName: TV
   score: 0
   discripition: An old CRT TV, why do you keep falling asleep in front of this thing
-  itemPic: {fileID: 0}
+  itemPic: {fileID: 21300000, guid: 8f400e1805d7f98418615205580701f3, type: 3}

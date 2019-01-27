@@ -14,4 +14,4 @@ MonoBehaviour:
   itemsName: Pizza
   score: 900
   discripition: A pineapple pizza, why did you get this you hate pineapple
-  itemPic: {fileID: 0}
+  itemPic: {fileID: 21300000, guid: 4778df53a886e2c4f8950f167ed26da0, type: 3}

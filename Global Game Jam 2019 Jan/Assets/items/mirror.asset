@@ -15,4 +15,4 @@ MonoBehaviour:
   score: 900
   discripition: An old brozne mirror, no matter how much you go through it's still
     you
-  itemPic: {fileID: 0}
+  itemPic: {fileID: 21300000, guid: 1c70889d4b2631c46bd010e74824512e, type: 3}

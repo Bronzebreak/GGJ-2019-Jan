@@ -6,8 +6,4 @@ public class Script_Item : MonoBehaviour
 {
     public string itemName;
     public Sprite sprite;
-
-
-
-	
 }
