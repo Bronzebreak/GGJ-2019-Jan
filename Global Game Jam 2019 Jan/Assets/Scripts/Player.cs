@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rigBody;
     public Overlord overlordReference;
     public Spawner spawnReference;
+    public string itemName;
 
     //Action Variables
     public KeyCode moveRight;
@@ -126,12 +127,19 @@ public class Player : MonoBehaviour
         // ...if it is a collectible...
         if (collision.tag == "Collectible")
         {
+            //sets variable value equal to object name
+            itemName = collision.gameObject.name;
+            //calls function in overlord
+            overlordReference.CheckItem();
+
             overlordReference.score += 10;
             Destroy(collision.gameObject);
 
             //play collect sound
             collectEffect.Play();
         }
+
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
