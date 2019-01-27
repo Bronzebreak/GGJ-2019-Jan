@@ -265,6 +265,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &338227078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 338227079}
+  - component: {fileID: 338227081}
+  - component: {fileID: 338227080}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &338227079
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 338227078}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1680248247}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &338227080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 338227078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: cafb58c3c12b0e24b8ec22cbe627e3e1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &338227081
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 338227078}
+  m_CullTransparentMesh: 0
 --- !u!1 &496623397
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,7 +578,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1680248247}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.30183977, y: 0.5168692}
   m_AnchorMax: {x: 0.68335545, y: 0.74300003}
@@ -584,10 +653,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1680248247}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.32612896, y: 0.74300003}
-  m_AnchorMax: {x: 0.6488711, y: 0.87200004}
+  m_AnchorMin: {x: 0.127, y: 0.74300003}
+  m_AnchorMax: {x: 0.8660311, y: 0.87200004}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -623,7 +692,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Global Game Game 2019
+  m_Text: 'Global Game Jam January 2019
 
 '
 --- !u!222 &1188925425
@@ -664,7 +733,7 @@ RectTransform:
   m_Children:
   - {fileID: 192105783}
   m_Father: {fileID: 1680248247}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.08312893, y: 0.1562617}
   m_AnchorMax: {x: 0.29051566, y: 0.30921498}
@@ -711,7 +780,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1284373608}
-        m_MethodName: OnClickedMenu
+        m_MethodName: LoadLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -768,7 +837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d07a2c4ad36096d40a06d177eebdaca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: Menu
+  levelToLoad: Game
 --- !u!1 &1680248243
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,6 +923,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 338227079}
   - {fileID: 1188925423}
   - {fileID: 1146504223}
   - {fileID: 1284373604}
@@ -898,7 +968,7 @@ RectTransform:
   m_Children:
   - {fileID: 885490335}
   m_Father: {fileID: 1680248247}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.4036133, y: 0.1562617}
   m_AnchorMax: {x: 0.61064464, y: 0.30921498}
@@ -944,8 +1014,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1284373608}
-        m_MethodName: OnClickedMenu
+      - m_Target: {fileID: 1692195493}
+        m_MethodName: LoadLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1015,7 +1085,6 @@ GameObject:
   - component: {fileID: 1744050613}
   - component: {fileID: 1744050612}
   - component: {fileID: 1744050615}
-  - component: {fileID: 1744050616}
   m_Layer: 5
   m_Name: Quit_Button
   m_TagString: Untagged
@@ -1035,7 +1104,7 @@ RectTransform:
   m_Children:
   - {fileID: 949676887}
   m_Father: {fileID: 1680248247}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7278711, y: 0.1562617}
   m_AnchorMax: {x: 0.93925786, y: 0.30921498}
@@ -1081,7 +1150,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1744050616}
+      - m_Target: {fileID: 1744050615}
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -1140,19 +1209,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: 
---- !u!114 &1744050616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1744050610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 438c45676a04b98479982046ca33bee7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
-  playerRef: {fileID: 0}
 --- !u!1 &2111065251
 GameObject:
   m_ObjectHideFlags: 0
