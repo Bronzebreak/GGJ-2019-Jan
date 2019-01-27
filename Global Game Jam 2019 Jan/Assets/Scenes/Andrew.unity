@@ -627,6 +627,7 @@ MonoBehaviour:
   moveRight: 0
   moveLeft: 0
   horizontalAxis: 
+  itemName: 
   safeZone: 0
   spawnReference: {fileID: 0}
 --- !u!1 &1282036500 stripped
@@ -836,8 +837,12 @@ MonoBehaviour:
   playerRefTest: {fileID: 1268204560}
   obj:
   - {fileID: 1143657509}
-  - {fileID: 900428885}
   - {fileID: 1413383934}
+  - {fileID: 900428885}
+  collectiblesList:
+  - {fileID: 1282036500}
+  - {fileID: 180920394}
+  - {fileID: 1788506624}
 --- !u!4 &2004934149
 Transform:
   m_ObjectHideFlags: 0

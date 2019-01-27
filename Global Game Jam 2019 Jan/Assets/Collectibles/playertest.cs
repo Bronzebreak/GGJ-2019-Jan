@@ -5,11 +5,14 @@ using UnityEngine;
 public class playertest : MonoBehaviour {
     //Externally Referenced Variables
     private Rigidbody2D rigBody;
+    //reference to overlord
     public AndrewOverlord over;
     //Action Variables
     public KeyCode moveRight;
     public KeyCode moveLeft;
     public string horizontalAxis;
+    //reference to item name
+    public string itemName;
 
     //Action Restrictions
     private bool canJump;
@@ -58,7 +61,10 @@ public class playertest : MonoBehaviour {
 
     public void OnTriggerEnter2D(Collider2D trig)
     {
-        print(trig.gameObject.name);
+        //sets variable value equal to object name
+        itemName = trig.gameObject.name;
+        print(itemName);
+        //calls function in overlord
         over.CheckItem();
     }
 
