@@ -12,7 +12,7 @@ public class Destroyer : MonoBehaviour
         if (other.tag == "Player")
         {
             // ...load the 'game over' scene.
-            SceneManager.LoadScene("Reagan");
+            SceneManager.LoadScene("End");
             return;
         }
 
