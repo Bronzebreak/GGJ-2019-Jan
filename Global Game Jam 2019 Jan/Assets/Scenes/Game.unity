@@ -874,3 +874,45 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!1001 &1933251574
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4986643818965842, guid: 5ec845e1643a8fe48a2c04707f75cfcd, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4986643818965842, guid: 5ec845e1643a8fe48a2c04707f75cfcd, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4986643818965842, guid: 5ec845e1643a8fe48a2c04707f75cfcd, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4986643818965842, guid: 5ec845e1643a8fe48a2c04707f75cfcd, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4986643818965842, guid: 5ec845e1643a8fe48a2c04707f75cfcd, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4986643818965842, guid: 5ec845e1643a8fe48a2c04707f75cfcd, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4986643818965842, guid: 5ec845e1643a8fe48a2c04707f75cfcd, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4986643818965842, guid: 5ec845e1643a8fe48a2c04707f75cfcd, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5ec845e1643a8fe48a2c04707f75cfcd, type: 2}
+  m_IsPrefabAsset: 0
