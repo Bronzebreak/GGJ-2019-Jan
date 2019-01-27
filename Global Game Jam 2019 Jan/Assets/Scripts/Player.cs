@@ -20,10 +20,17 @@ public class Player : MonoBehaviour
     private bool canJump;
     public bool safeZone = false;
 
-    //sound
+    //jump sound
     public AudioClip jumpSounds;
     private AudioSource jumpEffect;
 
+    //home sound
+    public AudioClip homeSounds;
+    private AudioSource homeEffect;
+
+    //collect sound
+    public AudioClip collectSounds;
+    private AudioSource collectEffect;
     /*  Animation Notes
     Variables:
     private SpriteRenderer myRenderer;
@@ -43,6 +50,12 @@ public class Player : MonoBehaviour
         //sound insturtions
         jumpEffect = GetComponent<AudioSource>();
         jumpEffect.clip = jumpSounds;
+
+        homeEffect = GetComponent<AudioSource>();
+        homeEffect.clip = homeSounds;
+
+        collectEffect = GetComponent<AudioSource>();
+        collectEffect.clip = collectSounds;
     }
 
     private void Update()
@@ -105,6 +118,9 @@ public class Player : MonoBehaviour
         {
             // ...player is in a safe zone...
             safeZone = true;
+
+            //play home music
+            homeEffect.Play();
         }
 
         // ...if it is a collectible...
@@ -112,6 +128,9 @@ public class Player : MonoBehaviour
         {
             overlordReference.score += 10;
             Destroy(collision.gameObject);
+
+            //play collect sound
+            collectEffect.Play();
         }
     }
 
