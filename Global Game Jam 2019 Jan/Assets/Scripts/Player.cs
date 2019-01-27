@@ -96,7 +96,7 @@ public class Player : MonoBehaviour
         // ...if it is a collectible...
         if (collision.tag == "Collectible")
         {
-            overlordReference.score += 1000;
+            overlordReference.score += 10;
             Destroy(collision.gameObject);
         }
     }
