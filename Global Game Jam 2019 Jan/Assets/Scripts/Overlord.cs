@@ -25,7 +25,7 @@ public class Overlord : MonoBehaviour
         {
             // ...increase score in accordance with the difference in time between frames...
             score += Time.deltaTime;
-            displayScore.text = score.ToString();
+            displayScore.text = "Score: " + ((int)(score*(100))).ToString();
         }
 
         // ...if Esc is pressed...
