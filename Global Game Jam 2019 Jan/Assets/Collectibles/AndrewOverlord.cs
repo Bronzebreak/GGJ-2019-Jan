@@ -28,7 +28,7 @@ public class AndrewOverlord : MonoBehaviour
         {
             //goes through all elements of the array and list.
             b=i; 
-            if (playerRefTest.itemName == obj[i].name)
+            if (/*playerRefTest.itemName == obj[i].name*/playerRefTest.itemName.Contains(obj[i].name.ToLower()))
             {
                 //If object is in the array set it active
                 obj[i].gameObject.SetActive(true);
