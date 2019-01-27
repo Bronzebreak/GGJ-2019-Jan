@@ -7,6 +7,8 @@ public class AndrewOverlord : MonoBehaviour
 {
     //Player reference
     public playertest playerRefTest;
+    public GameObject cameraRefTest;
+    public GameObject itemsRefTest;
     //Index for spawn list
     int b = 0;
     //List length
@@ -49,5 +51,13 @@ public class AndrewOverlord : MonoBehaviour
         {
             b = 0;
         }
-	}
+        if (Input.GetKey(KeyCode.F))
+        {
+            itemsRefTest.transform.parent = playerRefTest.transform;
+        }
+        if (Input.GetKey(KeyCode.E))
+        {
+            itemsRefTest.transform.parent = null;
+        }
+    }
 }
