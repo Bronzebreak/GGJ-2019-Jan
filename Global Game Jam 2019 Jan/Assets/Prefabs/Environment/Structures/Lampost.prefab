@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4686251641240764}
   - component: {fileID: 212418394139303148}
   m_Layer: 0
-  m_Name: Lampost_Fix
+  m_Name: Lampost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
