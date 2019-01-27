@@ -11,11 +11,25 @@ public class Overlord : MonoBehaviour
     public float playerXPrevious;
     public float playerXCurrent;
     public Text displayScore;
+    public GameObject houseSpawnerRef;
+    public Spawner SpawnerRef;
 
     public Vector3 previousPosition;
     public Vector3 currentPosition;
     public bool playerStopped = false;
     public int framesStopped = 0;
+
+    //Player reference
+    public GameObject cameraRefTest;
+    public GameObject itemsRefTest;
+
+    //Index for spawn list
+    int b = 0;
+    //List length
+    int listLength;
+    //Array with game objects 
+    public GameObject[] obj;
+
 
     //Once a frame...
     private void Update()
@@ -63,7 +77,43 @@ public class Overlord : MonoBehaviour
             SceneManager.LoadScene("End");
         }
 
+        //sets varieable to list length
+        listLength = SpawnerRef.collectiblesList.Count;
+        //If index goes out of range sets it to 0
+        if (b >= (listLength - 1))
+        {
+            b = 0;
+        }
 
+
+
+
+        if (Input.GetKey(KeyCode.E))
+        {
+            itemsRefTest.transform.position = houseSpawnerRef.transform.position;
+            itemsRefTest.transform.parent = houseSpawnerRef.transform;
+        }
+    }
+
+    public void CheckItem()
+    {
+        for (int i = 0; i < obj.Length; i++)
+        {
+            //goes through all elements of the array and list.
+            b = i;
+            if (playerRef.itemName.Contains(obj[i].name))
+            {
+                //If object is in the array set it active
+                obj[i].gameObject.SetActive(true);
+
+                //Empties the list element so it doesnt spawn again
+                SpawnerRef.collectiblesList[b] = null;
+            }
+            else
+            {
+                b = i;
+            }
+        }
     }
 
     //When function is called...

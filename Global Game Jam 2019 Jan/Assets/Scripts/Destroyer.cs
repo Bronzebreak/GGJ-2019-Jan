@@ -4,10 +4,20 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Destroyer : MonoBehaviour
-{  
+{
+    public GameObject houseSpawnerRef;
+    public GameObject itemsRefTest;
+
     //If collision with a trigger occurs...
     public void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.tag == "House")
+        {
+            itemsRefTest.transform.parent = houseSpawnerRef.transform;
+            itemsRefTest.transform.position = houseSpawnerRef.transform.position;
+            
+        }
+
         // ...if it's the player...
         if (other.tag == "Player")
         {
