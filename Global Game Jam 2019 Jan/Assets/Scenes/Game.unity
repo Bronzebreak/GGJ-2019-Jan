@@ -263,6 +263,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1052022309303562, guid: 3d0c7ffc9cf080047801e02206943e22, type: 2}
+      propertyPath: m_Name
+      value: Chunk_Home_Actual
+      objectReference: {fileID: 0}
+    - target: {fileID: 1052022309303562, guid: 3d0c7ffc9cf080047801e02206943e22, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d0c7ffc9cf080047801e02206943e22, type: 2}
   m_IsPrefabAsset: 0
@@ -648,7 +656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1896359952
 AudioListener:
   m_ObjectHideFlags: 0
@@ -744,7 +752,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1899736941
 MonoBehaviour:
   m_ObjectHideFlags: 0
