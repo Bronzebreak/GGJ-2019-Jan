@@ -20,6 +20,10 @@ public class Player : MonoBehaviour
     private bool canJump;
     public bool safeZone = false;
 
+    //sound
+    public AudioClip jumpSounds;
+    private AudioSource jumpEffect;
+
     /*  Animation Notes
     Variables:
     private SpriteRenderer myRenderer;
@@ -35,6 +39,10 @@ public class Player : MonoBehaviour
     {
         //Retrieves the rigidbody component attached to this game object.
         rigBody = GetComponent<Rigidbody2D>();
+
+        //sound insturtions
+        jumpEffect = GetComponent<AudioSource>();
+        jumpEffect.clip = jumpSounds;
     }
 
     private void Update()
@@ -51,6 +59,9 @@ public class Player : MonoBehaviour
 
                 //... and the player can no longer jump.
                 canJump = false;
+
+                //play sound
+                jumpEffect.Play();
             }
         }
         #endregion
