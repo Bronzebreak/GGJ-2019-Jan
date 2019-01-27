@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Credits_menu1 : MonoBehaviour
+public class LoadLevel : MonoBehaviour
 {
     //Variables
     public string levelToLoad;
@@ -19,7 +19,7 @@ public class Credits_menu1 : MonoBehaviour
         }
     }
 
-    public void LoadLevel()
+    public void LoadingLevel()
     {
         SceneManager.LoadScene(levelToLoad);
     }
