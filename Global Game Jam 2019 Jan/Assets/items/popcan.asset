@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f685f40f3ffa61b4eaf777cf17feaf5c, type: 3}
-  m_Name: chair
+  m_Name: popcan
   m_EditorClassIdentifier: 
-  itemsName: Chair
-  score: 900
-  discripition: An leather reclining chair, there is a destint butt mark in the seat
-  itemPic: {fileID: 0}
+  itemsName: pop can
+  score: 0
+  discripition: A can of pop, it's gone flay a long time ago
+  itemPic: {fileID: 21300000, guid: 6562f94e0cfb75e448015dbafea48894, type: 3}

@@ -14,4 +14,4 @@ MonoBehaviour:
   itemsName: Bed
   score: 900
   discripition: A plush twin bed, you want to snuggle inbetween the sheets
-  itemPic: {fileID: 0}
+  itemPic: {fileID: 21300000, guid: 1961f308f1ddd674082738548b59ceb4, type: 3}

@@ -9,10 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f685f40f3ffa61b4eaf777cf17feaf5c, type: 3}
-  m_Name: mirror
+  m_Name: books
   m_EditorClassIdentifier: 
-  itemsName: Mirror
-  score: 900
-  discripition: An old brozne mirror, no matter how much you go through it's still
-    you
-  itemPic: {fileID: 21300000, guid: 1c70889d4b2631c46bd010e74824512e, type: 3}
+  itemsName: books
+  score: 0
+  discripition: A stack of novels, you really should read theses
+  itemPic: {fileID: 21300000, guid: 082e617d948ad784b930bcf95829c4cd, type: 3}

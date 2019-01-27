@@ -14,4 +14,4 @@ MonoBehaviour:
   itemsName: Sports trophy
   score: 900
   discripition: A 2nd place Judo trophy, the inscribetion is wrong though
-  itemPic: {fileID: 0}
+  itemPic: {fileID: 21300000, guid: c050ba58f63c3854890e1a1be3a05324, type: 3}

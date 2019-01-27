@@ -14,4 +14,4 @@ MonoBehaviour:
   itemsName: Computer desk
   score: 900
   discripition: A computer desk covered in documents, you spend to much time here
-  itemPic: {fileID: 0}
+  itemPic: {fileID: 21300000, guid: fd71bcd7486470744aa9c1b835331219, type: 3}
