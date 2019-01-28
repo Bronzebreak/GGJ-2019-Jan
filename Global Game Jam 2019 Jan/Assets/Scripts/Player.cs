@@ -32,10 +32,18 @@ public class Player : MonoBehaviour
     */
     #endregion
 
+    //player jump sound
+    public AudioClip jumpSounds;
+    private AudioSource jumpEffect;
+
     void Start()
     {
         //Retrieves the rigidbody component attached to this game object.
         rigBody = GetComponent<Rigidbody2D>();
+
+        //sound insturtions
+        jumpEffect = GetComponent<AudioSource>();
+        jumpEffect.clip = jumpSounds;
     }
 
     private void Update()
@@ -52,6 +60,9 @@ public class Player : MonoBehaviour
 
                 //... and the player can no longer jump.
                 canJump = false;
+
+                //play sound
+                jumpEffect.Play();
             }
         }
         #endregion
