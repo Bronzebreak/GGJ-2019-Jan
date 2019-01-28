@@ -2770,11 +2770,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 60
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2817,16 +2817,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  playerRef: {fileID: 1899736941}
-  playerXPrevious: 0
-  playerXCurrent: 0
   displayScore: {fileID: 1878172987}
+  playerRef: {fileID: 1899736941}
   houseSpawnerRef: {fileID: 1564513243}
   SpawnerRef: {fileID: 2137074292}
-  previousPosition: {x: 0, y: 0, z: 0}
-  currentPosition: {x: 0, y: 0, z: 0}
-  playerStopped: 0
-  framesStopped: 0
   cameraRefTest: {fileID: 1896359951}
   itemsRefTest: {fileID: 389174632}
   obj:
@@ -3058,6 +3052,7 @@ MonoBehaviour:
   overlordReference: {fileID: 1881495358}
   spawnReference: {fileID: 0}
   itemName: 
+  collectiblesCollected: 0
   moveRight: 100
   moveLeft: 97
   horizontalAxis: Horizontal1

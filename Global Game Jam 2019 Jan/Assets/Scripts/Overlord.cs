@@ -6,22 +6,25 @@ using UnityEngine.UI;
 
 public class Overlord : MonoBehaviour
 {
+    #region Variables
+    //Referenced
     public float score;
-    public Player playerRef;
-    public float playerXPrevious;
-    public float playerXCurrent;
     public Text displayScore;
+    public Player playerRef;
     public GameObject houseSpawnerRef;
     public Spawner SpawnerRef;
 
-    public Vector3 previousPosition;
-    public Vector3 currentPosition;
-    public bool playerStopped = false;
-    public int framesStopped = 0;
+    //Move Detection
+    private Vector3 previousPosition;
+    private Vector3 currentPosition;
+    private int framesStopped = 0;
+    private float playerXPrevious;
+    private float playerXCurrent;
 
     //Player reference
     public GameObject cameraRefTest;
     public GameObject itemsRefTest;
+    #endregion
 
     //Index for spawn list
     int b = 0;
