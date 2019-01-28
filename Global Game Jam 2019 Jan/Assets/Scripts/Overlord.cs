@@ -56,6 +56,7 @@ public class Overlord : MonoBehaviour
             RestartGame();
         }
 
+        #region Move Detection
         playerXPrevious = playerXCurrent;
         playerXCurrent = playerRef.transform.position.x;
 
@@ -63,7 +64,6 @@ public class Overlord : MonoBehaviour
         {
             //playerStopped = true;
             framesStopped += 1;
-            
         }
 
         else
@@ -76,9 +76,11 @@ public class Overlord : MonoBehaviour
         {
             SceneManager.LoadScene("End");
         }
+        #endregion
 
         //sets varieable to list length
         listLength = SpawnerRef.collectiblesList.Count;
+
         //If index goes out of range sets it to 0
         if (b >= (listLength - 1))
         {

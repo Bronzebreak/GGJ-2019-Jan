@@ -33,17 +33,20 @@ public class Player : MonoBehaviour
     #endregion
 
     //player jump sound
-    public AudioClip jumpSounds;
-    private AudioSource jumpEffect;
+    public AudioSource jumpEffect;
+
+    //home sound
+    public AudioSource homeEffect;
+
+    //collect sound
+    public AudioSource collectEffect;
+
+    public AudioSource bGM;
 
     void Start()
     {
         //Retrieves the rigidbody component attached to this game object.
         rigBody = GetComponent<Rigidbody2D>();
-
-        //sound insturtions
-        jumpEffect = GetComponent<AudioSource>();
-        jumpEffect.clip = jumpSounds;
     }
 
     private void Update()
@@ -87,7 +90,7 @@ public class Player : MonoBehaviour
         #endregion
     }
 
-    //Upon collision with an object...
+    //Upon staying overlapped with an object...
     private void OnTriggerStay2D(Collider2D collision)
     {
         // ...if object's name contains 'ground'
@@ -119,9 +122,10 @@ public class Player : MonoBehaviour
 
             overlordReference.score += 10;
             Destroy(collision.gameObject);
-        }
 
-        
+            //play collect sound
+            collectEffect.Play();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
