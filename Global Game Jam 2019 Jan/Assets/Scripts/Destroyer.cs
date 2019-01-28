@@ -8,6 +8,9 @@ public class Destroyer : MonoBehaviour
     public GameObject houseSpawnerRef;
     public GameObject itemsRefTest;
 
+    //player death audio
+    public AudioSource deathEffect;
+
     //If collision with a trigger occurs...
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -23,7 +26,9 @@ public class Destroyer : MonoBehaviour
         {
             // ...load the 'game over' scene.
             SceneManager.LoadScene("End");
+            deathEffect.Play();
             return;
+            
         }
 
         // ...if it has a parent...
