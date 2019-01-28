@@ -81,7 +81,7 @@ public class Overlord : MonoBehaviour
 
         if (framesStopped >= 2 && playerRef.safeZone == false)
         {
-            SceneManager.LoadScene("End");
+            SceneManager.LoadScene("Game_Over_Lose");
         }
         #endregion
 
