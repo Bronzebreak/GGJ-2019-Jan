@@ -88,20 +88,26 @@ public class Overlord : MonoBehaviour
         }
     }
 
+    //When function is called...
     public void CheckItem()
     {
+        // ...check list until the end of it...
         for (int i = 0; i < obj.Length; i++)
         {
-            //goes through all elements of the array and list.
+            // ...go through every element...
             b = i;
+
+            // ...and if the name matches...
             if (playerRef.itemName.Contains(obj[i].name))
             {
-                //If object is in the array set it active
+                // ...set the item to active...
                 obj[i].gameObject.SetActive(true);
 
-                //Empties the list element so it doesnt spawn again
+                // ...then, empty the list element to prevent respawns.
                 SpawnerRef.collectiblesList[b] = null;
             }
+
+
             else
             {
                 b = i;
@@ -109,6 +115,7 @@ public class Overlord : MonoBehaviour
         }
     }
 
+    #region Hotkeys
     //When function is called...
     public void RestartGame()
     {
@@ -122,4 +129,5 @@ public class Overlord : MonoBehaviour
         // ...exit application.
         Application.Quit();
     }
+    #endregion
 }
