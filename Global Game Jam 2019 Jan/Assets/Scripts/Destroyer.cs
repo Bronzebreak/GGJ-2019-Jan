@@ -25,8 +25,8 @@ public class Destroyer : MonoBehaviour
         else if (other.tag == "Player")
         {
             // ...load the 'game over' scene.
-            SceneManager.LoadScene("End");
             deathEffect.Play();
+            SceneManager.LoadScene("End");
             return;
             
         }
