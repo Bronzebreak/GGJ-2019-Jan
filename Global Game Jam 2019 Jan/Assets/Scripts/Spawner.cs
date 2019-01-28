@@ -8,6 +8,7 @@ public class Spawner : MonoBehaviour
     public float spawnDelay;
     public float delayTimer;
     public Player playerRef;
+    public List<GameObject> collectiblesList;
 
     //Upon initialization...
     private void Start()
