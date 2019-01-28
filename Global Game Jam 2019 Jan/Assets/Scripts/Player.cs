@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
     //collect sound
     public AudioSource collectEffect;
 
+
     public AudioSource bGM;
 
     void Start()
