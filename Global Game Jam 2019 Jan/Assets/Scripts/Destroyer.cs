@@ -25,8 +25,7 @@ public class Destroyer : MonoBehaviour
         else if (other.tag == "Player")
         {
             // ...load the 'game over' scene.
-            deathEffect.Play();
-            SceneManager.LoadScene("End");
+            SceneManager.LoadScene("Game_Over_Lose");
             return;
             
         }
@@ -45,5 +44,10 @@ public class Destroyer : MonoBehaviour
             // ...destroy the object.
             Destroy(other.gameObject);
         }
+
+        //IEnumerator ()
+        //{
+
+       // }
     }
 }
