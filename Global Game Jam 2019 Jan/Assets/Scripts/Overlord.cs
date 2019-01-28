@@ -84,15 +84,6 @@ public class Overlord : MonoBehaviour
         {
             b = 0;
         }
-
-
-
-
-        if (Input.GetKey(KeyCode.E))
-        {
-            itemsRefTest.transform.position = houseSpawnerRef.transform.position;
-            itemsRefTest.transform.parent = houseSpawnerRef.transform;
-        }
     }
 
     public void CheckItem()

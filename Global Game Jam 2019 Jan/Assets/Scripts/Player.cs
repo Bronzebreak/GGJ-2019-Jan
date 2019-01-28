@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 //...the character applies a force impulse to the vertical axis...
-                rigBody.AddForce(new Vector2(0, 50f), ForceMode2D.Impulse);
+                rigBody.AddForce(new Vector2(0, 75f), ForceMode2D.Impulse);
 
                 //... and the player can no longer jump.
                 canJump = false;
