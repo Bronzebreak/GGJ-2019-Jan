@@ -24,7 +24,6 @@ public class Player : MonoBehaviour
 
     //Sound
     public AudioSource jumpEffect;
-    public AudioSource homeEffect;
     public AudioSource collectEffect;
     public AudioSource bGM;
     #endregion
