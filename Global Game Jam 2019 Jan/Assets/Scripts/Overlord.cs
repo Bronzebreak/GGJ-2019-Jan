@@ -42,6 +42,7 @@ public class Overlord : MonoBehaviour
             displayScore.text = "Score: " + ((int)(score*(100))).ToString();
         }
 
+        #region Hotkeys
         // ...if Esc is pressed...
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -55,6 +56,7 @@ public class Overlord : MonoBehaviour
             // ...execute restarting function.
             RestartGame();
         }
+        #endregion
 
         #region Move Detection
         playerXPrevious = playerXCurrent;
@@ -78,7 +80,7 @@ public class Overlord : MonoBehaviour
         }
         #endregion
 
-        //sets varieable to list length
+        //sets variable to list length
         listLength = SpawnerRef.collectiblesList.Count;
 
         //If index goes out of range sets it to 0
@@ -115,7 +117,7 @@ public class Overlord : MonoBehaviour
         }
     }
 
-    #region Hotkeys
+    #region Hotkey Functionality
     //When function is called...
     public void RestartGame()
     {
