@@ -19,7 +19,7 @@ public class Destroyer : MonoBehaviour
         }
 
         // ...if it's the player...
-        if (other.tag == "Player")
+        else if (other.tag == "Player")
         {
             // ...load the 'game over' scene.
             SceneManager.LoadScene("End");
@@ -27,10 +27,11 @@ public class Destroyer : MonoBehaviour
         }
 
         // ...if it has a parent...
-        else if (other.gameObject.transform.parent)
+        else if (other.gameObject.transform.parent != null)
         {
             // ...destroy the parent (and all children).
             Destroy(other.gameObject.transform.parent.gameObject);
+
         }
 
         // ...if it doesn't have a parent...
