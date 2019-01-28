@@ -1,0 +1,10 @@
+diff a/Global Game Jam 2019 Jan/Assets/Scenes/Game_Over_Win.unity b/Global Game Jam 2019 Jan/Assets/Scenes/Game_Over_Win.unity	(rejected hunks)
+@@ -244,7 +244,7 @@
+       m_Calls: []
+     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+-  m_Sprite: {fileID: 21300000, guid: 1a312f2ec5c6de640bac86f464d87637, type: 3}
++  m_Sprite: {fileID: 21300000, guid: 9c6e004ecd0162d4c8286f8f9f17e528, type: 3}
+   m_Type: 0
+   m_PreserveAspect: 0
+   m_FillCenter: 1
