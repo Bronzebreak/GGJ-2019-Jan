@@ -38,6 +38,7 @@ public class Overlord : MonoBehaviour
     //player death audio
     public AudioSource deathEffect;
 
+    public static GameObject refrence;
 
     //Once a frame...
     private void Update()
@@ -137,7 +138,7 @@ public class Overlord : MonoBehaviour
     public void RestartGame()
     {
         // ...load scene of publicly set name 'scene'.
-        SceneManager.LoadScene("Derek");
+        SceneManager.LoadScene("Game");
     }
 
     //When function is called...
@@ -148,11 +149,15 @@ public class Overlord : MonoBehaviour
     }
     #endregion
 
-   // IEnumerator soundTime()
-    //{
-       // yield return new WaitForSeconds(1);
-       // SceneManager.LoadScene("Game_Over_Lose");
-   // }
+    private void Awake()
+    {
+        if (refrence == null)
+        {
+            refrence = this.gameObject;
+            DontDestroyOnLoad(this.gameObject);
+        }
+
+    }
 }
 
 
