@@ -35,6 +35,9 @@ public class Overlord : MonoBehaviour
     //Array with game objects 
     public GameObject[] obj;
 
+    //player death audio
+    public AudioSource deathEffect;
+
 
     //Once a frame...
     private void Update()
@@ -81,7 +84,10 @@ public class Overlord : MonoBehaviour
 
         if (framesStopped >= 2 && playerRef.safeZone == false)
         {
+            deathEffect.Play();
             SceneManager.LoadScene("Game_Over_Lose");
+            // StartCoroutine("soundTime");
+
         }
         #endregion
 
@@ -141,4 +147,12 @@ public class Overlord : MonoBehaviour
         Application.Quit();
     }
     #endregion
+
+   // IEnumerator soundTime()
+    //{
+       // yield return new WaitForSeconds(1);
+       // SceneManager.LoadScene("Game_Over_Lose");
+   // }
 }
+
+

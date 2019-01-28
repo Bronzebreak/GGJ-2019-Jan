@@ -25,6 +25,7 @@ public class Destroyer : MonoBehaviour
         else if (other.tag == "Player")
         {
             // ...load the 'game over' scene.
+
             SceneManager.LoadScene("Game_Over_Lose");
             return;
             
@@ -45,9 +46,7 @@ public class Destroyer : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        //IEnumerator ()
-        //{
-
-       // }
+    
     }
+
 }
