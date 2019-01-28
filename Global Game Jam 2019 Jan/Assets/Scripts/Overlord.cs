@@ -25,8 +25,10 @@ public class Overlord : MonoBehaviour
 
     //Index for spawn list
     int b = 0;
+
     //List length
     int listLength;
+
     //Array with game objects 
     public GameObject[] obj;
 
@@ -88,6 +90,11 @@ public class Overlord : MonoBehaviour
         {
             b = 0;
         }
+
+        if(playerRef.collectiblesCollected >= 20)
+        {
+            SceneManager.LoadScene("Game_Over_Win");
+        }
     }
 
     //When function is called...
@@ -108,7 +115,6 @@ public class Overlord : MonoBehaviour
                 // ...then, empty the list element to prevent respawns.
                 SpawnerRef.collectiblesList[b] = null;
             }
-
 
             else
             {

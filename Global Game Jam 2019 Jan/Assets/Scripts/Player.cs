@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public Overlord overlordReference;
     public Spawner spawnReference;
     public string itemName;
+    public int collectiblesCollected;
 
     //Action Variables
     public KeyCode moveRight;
@@ -21,28 +22,13 @@ public class Player : MonoBehaviour
     private bool canJump;
     public bool safeZone = false;
 
-    /*  Animation Notes
-    Variables:
-    private SpriteRenderer myRenderer;
-    public Sprite[] animations;
-    Start: Retrieves the sprite renderer component attached to this game object.
-    myRenderer = GetComponent<SpriteRenderer>();
-    Function:  
-    myRenderer.sprite = animations[0];
-    */
+    //Sound
+    public AudioSource jumpEffect;
+    public AudioSource homeEffect;
+    public AudioSource collectEffect;
+    public AudioSource bGM;
     #endregion
 
-    //player jump sound
-    public AudioSource jumpEffect;
-
-    //home sound
-    public AudioSource homeEffect;
-
-    //collect sound
-    public AudioSource collectEffect;
-
-
-    public AudioSource bGM;
 
     void Start()
     {
@@ -123,6 +109,8 @@ public class Player : MonoBehaviour
 
             overlordReference.score += 10;
             Destroy(collision.gameObject);
+
+            collectiblesCollected++;
 
             //play collect sound
             collectEffect.Play();
