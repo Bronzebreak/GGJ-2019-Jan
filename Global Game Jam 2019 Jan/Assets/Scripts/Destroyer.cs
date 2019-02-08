@@ -7,7 +7,6 @@ public class Destroyer : MonoBehaviour
 {
     public GameObject houseSpawnerRef;
     public GameObject itemsRefTest;
-    public LoadLevel levelReferencer;
 
     //player death audio
     public AudioSource deathEffect;
@@ -19,14 +18,17 @@ public class Destroyer : MonoBehaviour
         {
             itemsRefTest.transform.parent = houseSpawnerRef.transform;
             itemsRefTest.transform.position = houseSpawnerRef.transform.position;
+            
         }
 
         // ...if it's the player...
         else if (other.tag == "Player")
         {
             // ...load the 'game over' scene.
-            levelReferencer.canvasToLoad = "End_Lose";
-            levelReferencer.LoadCanvas();
+
+            SceneManager.LoadScene("Game_Over_Lose");
+            return;
+            
         }
 
         // ...if it has a parent...

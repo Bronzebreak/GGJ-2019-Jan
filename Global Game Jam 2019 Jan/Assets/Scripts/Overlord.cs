@@ -21,10 +21,9 @@ public class Overlord : MonoBehaviour
     private float playerXPrevious;
     private float playerXCurrent;
 
-    //Reference
+    //Player reference
     public GameObject cameraRefTest;
     public GameObject itemsRefTest;
-    public LoadLevel levelReferencer;
     #endregion
 
     //Index for spawn list
@@ -87,9 +86,9 @@ public class Overlord : MonoBehaviour
         if (framesStopped >= 2 && playerRef.safeZone == false)
         {
             deathEffect.Play();
-            levelReferencer.canvasToLoad = "End_Lose";
-            levelReferencer.LoadCanvas();
+            SceneManager.LoadScene("Game_Over_Lose");
             // StartCoroutine("soundTime");
+
         }
         #endregion
 
@@ -150,6 +149,15 @@ public class Overlord : MonoBehaviour
     }
     #endregion
 
+    private void Awake()
+    {
+        if (refrence == null)
+        {
+            refrence = this.gameObject;
+            DontDestroyOnLoad(this.gameObject);
+        }
+
+    }
 }
 
 
