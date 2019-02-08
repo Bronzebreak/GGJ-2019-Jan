@@ -24,6 +24,11 @@ public class Overlord : MonoBehaviour
     //Player reference
     public GameObject cameraRefTest;
     public GameObject itemsRefTest;
+
+    //text refernce
+    public Text playersTimeText;
+    public Text playerFinalscoreText;
+
     #endregion
 
     //Index for spawn list
@@ -133,6 +138,18 @@ public class Overlord : MonoBehaviour
         }
     }
 
+    //public void display()
+    //{
+        //player text update
+       // if (SceneManager.GetActiveScene().name == ("Game_Over_Lose"))
+           // {
+               // displayScore = GameObject.Find("score").GetComponent<Text>();
+
+           // score = SetFloat.Find("score");
+
+            //score.GetComponent<Text>().text = "score" + theScore;
+           // }
+    //}
     #region Hotkey Functionality
     //When function is called...
     public void RestartGame()
@@ -148,16 +165,24 @@ public class Overlord : MonoBehaviour
         Application.Quit();
     }
     #endregion
-
-    private void Awake()
+    
+  /*  private void Awake()
     {
-        if (refrence == null)
-        {
+        DontDestroyOnLoad(displayScore);
+         {
             refrence = this.gameObject;
             DontDestroyOnLoad(this.gameObject);
-        }
+         }
+
+         else if (refrence != this)
+
+         {
+            Destroy(this.gameObject);
+         }
 
     }
+    */
+    
 }
 
 
