@@ -5,15 +5,16 @@ using UnityEngine;
 public class Tile_Spawner : MonoBehaviour
 {
     public GameObject[] spawnedItems;
+    public GameObject spawnerRef;
     public float spawnDelay;
     public float delayTimer;
     public Player playerRef;
     private bool canSpawn;
-    float xPosition  = 0;
+    //float xPosition  = 0;
     Vector3 newPosition;
     void start()
     {
-        newPosition = new Vector3(0,0,0);
+        
     }
 
     //Multiple times a frame...
@@ -40,8 +41,7 @@ public class Tile_Spawner : MonoBehaviour
     //When function is called...
     void Spawn()
     {
-        
-        transform.position = newPosition;
+        newPosition = new Vector3(22.5f,-4.517f,0);
         // ...if the player is not in the house...
         if (playerRef.safeZone == false)
         {
@@ -53,10 +53,10 @@ public class Tile_Spawner : MonoBehaviour
             for (int i = 0; i <21; i++) 
             {
                 
-                Instantiate(spawnedItems[Random.Range(0, spawnedItems.GetLength(0))], transform.position, Quaternion.identity);
-                newPosition.x +=9;
-                transform.position = newPosition;
-                print(transform.position);
+                Instantiate(spawnedItems[Random.Range(0, spawnedItems.GetLength(0))], newPosition, Quaternion.identity);
+                newPosition.x +=9.0f;
+                //transform.position = newPosition;
+                print(newPosition);
             }
         }
 
