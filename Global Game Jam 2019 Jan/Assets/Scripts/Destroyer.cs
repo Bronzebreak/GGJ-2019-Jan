@@ -51,8 +51,6 @@ public class Destroyer : MonoBehaviour
             canvases[2].SetActive(false);
             canvases[3].SetActive(true);
             canvases[4].SetActive(false);
-            print("Why");
-            Destroy(other.gameObject);
         }
 
         // ...if it has a parent...
