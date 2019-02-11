@@ -170,24 +170,19 @@ public class Overlord : MonoBehaviour
         Application.Quit();
     }
     #endregion
-    
-  /*  private void Awake()
+    public void Awake()
     {
-        DontDestroyOnLoad(displayScore);
-         {
-            refrence = this.gameObject;
-            DontDestroyOnLoad(this.gameObject);
-         }
-
-         else if (refrence != this)
-
-         {
-            Destroy(this.gameObject);
-         }
-
+        if (refrence == null)
+        {
+            refrence = displayScore.gameObject;
+            refrence = playerRef.gameObject;
+            //DontDestroyOnLoad(displayScore.gameObject);
+        }
+        else if (refrence != displayScore)
+            Destroy(displayScore.gameObject);
     }
-    */
-    
+
+
 }
 
 
