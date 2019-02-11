@@ -9,10 +9,9 @@ public class Overlord : MonoBehaviour
     #region Variables
     //Referenced
     public float score;
+    public float time;
     public bool freezeScore;
-    public Text displayScore;
     public Player playerRef;
-    public GameObject houseSpawnerRef;
     public Spawner SpawnerRef;
 
     //Move Detection
@@ -27,7 +26,8 @@ public class Overlord : MonoBehaviour
     public GameObject itemsRefTest;
 
     //text refernce
-    public Text playersTimeText;
+    public Text displayScore;
+    public Text timeText;
     public Text playerFinalscoreText;
 
     #endregion
@@ -49,11 +49,16 @@ public class Overlord : MonoBehaviour
     //Once a frame...
     private void Update()
     {
+        // ...count up the time based off the difference in time between frames.
+        time += Time.deltaTime;
+
         // ...as long as the player isn't in a safe zone...
         if (playerRef.safeZone == false && freezeScore == false)
         {
             // ...increase score in accordance with the difference in time between frames...
             score += Time.deltaTime;
+
+            // ...and then update the score text.
             displayScore.text = "Score: " + ((int)(score*(100))).ToString();
         }
 

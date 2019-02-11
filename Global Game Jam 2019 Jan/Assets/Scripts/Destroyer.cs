@@ -5,21 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class Destroyer : MonoBehaviour
 {
-    public GameObject houseSpawnerRef;
+    public string canvasToLoad;
+    public GameObject menu;
+    public GameObject game;
+    public GameObject endWin;
+    public GameObject endLose;
+    public GameObject credits;
+
+    public GameObject[] canvases = new GameObject[5];
+
     public GameObject itemsRefTest;
     
     Vector3 housePosition;
 
-
     //player death audio
     public AudioSource deathEffect;
     
-
-
-    void start() 
+    void Start() 
     {
-        housePosition = itemsRefTest.transform.position;
-        housePosition.y = -4.517f;
+        canvases[0] = menu;
+        canvases[1] = game;
+        canvases[2] = endWin;
+        canvases[3] = endLose;
+        canvases[4] = credits;
     }
 
     //If collision with a trigger occurs...
@@ -32,18 +40,19 @@ public class Destroyer : MonoBehaviour
             housePosition.x += 486;
             housePosition.y = -3.11f;
             itemsRefTest.transform.position = housePosition;
-            
-            print(housePosition);
         }
 
         // ...if it's the player...
         else if (other.tag == "Player")
         {
             // ...load the 'game over' scene.
-
-            SceneManager.LoadScene("Game_Over_Lose");
-            return;
-            
+            canvases[0].SetActive(false);
+            canvases[1].SetActive(false);
+            canvases[2].SetActive(false);
+            canvases[3].SetActive(true);
+            canvases[4].SetActive(false);
+            print("Why");
+            Destroy(other.gameObject);
         }
 
         // ...if it has a parent...
@@ -51,7 +60,6 @@ public class Destroyer : MonoBehaviour
         {
             // ...destroy the parent (and all children).
             Destroy(other.gameObject.transform.parent.gameObject);
-
         }
 
         // ...if it doesn't have a parent...
@@ -60,8 +68,5 @@ public class Destroyer : MonoBehaviour
             // ...destroy the object.
             Destroy(other.gameObject);
         }
-
-    
     }
-
 }
