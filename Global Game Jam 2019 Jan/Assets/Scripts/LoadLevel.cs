@@ -12,6 +12,7 @@ public class LoadLevel : MonoBehaviour
     public GameObject endWin;
     public GameObject endLose;
     public GameObject credits;
+    public bool isOperator = false;
 
     public GameObject[] canvases = new GameObject[5];
 
@@ -23,11 +24,14 @@ public class LoadLevel : MonoBehaviour
         canvases[3] = endLose;
         canvases[4] = credits;
 
-        canvases[0].SetActive(true);
-        canvases[1].SetActive(false);
-        canvases[2].SetActive(false);
-        canvases[3].SetActive(false);
-        canvases[4].SetActive(false);
+        if (isOperator)
+        {
+            canvases[0].SetActive(true);
+            canvases[1].SetActive(false);
+            canvases[2].SetActive(false);
+            canvases[3].SetActive(false);
+            canvases[4].SetActive(false);
+        }
     }
 
     //Once a frame...
@@ -52,7 +56,7 @@ public class LoadLevel : MonoBehaviour
             canvases[4].SetActive(false);
         }
 
-        if (canvasToLoad == "game")
+        else if (canvasToLoad == "game")
         {
             canvases[0].SetActive(false);
             canvases[1].SetActive(true);
@@ -61,7 +65,7 @@ public class LoadLevel : MonoBehaviour
             canvases[4].SetActive(false);
         }
 
-        if (canvasToLoad == "endWin")
+        else if (canvasToLoad == "endWin")
         {
             canvases[0].SetActive(false);
             canvases[1].SetActive(false);
@@ -70,7 +74,7 @@ public class LoadLevel : MonoBehaviour
             canvases[4].SetActive(false);
         }
 
-        if (canvasToLoad == "endLose")
+        else if (canvasToLoad == "endLose")
         {
             canvases[0].SetActive(false);
             canvases[1].SetActive(false);
@@ -79,7 +83,7 @@ public class LoadLevel : MonoBehaviour
             canvases[4].SetActive(false);
         }
 
-        if (canvasToLoad == "credits")
+        else if (canvasToLoad == "credits")
         {
             canvases[0].SetActive(false);
             canvases[1].SetActive(false);
