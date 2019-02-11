@@ -799,7 +799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &299959840
 Transform:
   m_ObjectHideFlags: 0
@@ -1025,6 +1025,7 @@ MonoBehaviour:
   endWin: {fileID: 1188811952}
   endLose: {fileID: 1048167860}
   credits: {fileID: 1850914459}
+  isOperator: 0
   canvases:
   - {fileID: 0}
   - {fileID: 0}
@@ -2201,6 +2202,7 @@ MonoBehaviour:
   endWin: {fileID: 1188811952}
   endLose: {fileID: 1048167860}
   credits: {fileID: 1850914459}
+  isOperator: 0
   canvases:
   - {fileID: 0}
   - {fileID: 0}
@@ -2348,6 +2350,7 @@ MonoBehaviour:
   endWin: {fileID: 1188811952}
   endLose: {fileID: 1048167860}
   credits: {fileID: 1850914459}
+  isOperator: 0
   canvases:
   - {fileID: 0}
   - {fileID: 0}
@@ -3016,7 +3019,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1048167861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4010,7 +4013,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1188811953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4748,6 +4751,7 @@ MonoBehaviour:
   endWin: {fileID: 1188811952}
   endLose: {fileID: 1048167860}
   credits: {fileID: 1850914459}
+  isOperator: 0
   canvases:
   - {fileID: 0}
   - {fileID: 0}
@@ -6940,6 +6944,7 @@ MonoBehaviour:
   endWin: {fileID: 1188811952}
   endLose: {fileID: 1048167860}
   credits: {fileID: 1850914459}
+  isOperator: 0
   canvases:
   - {fileID: 0}
   - {fileID: 0}
@@ -7127,6 +7132,7 @@ MonoBehaviour:
   endWin: {fileID: 1188811952}
   endLose: {fileID: 1048167860}
   credits: {fileID: 1850914459}
+  isOperator: 1
   canvases:
   - {fileID: 0}
   - {fileID: 0}
@@ -7265,6 +7271,7 @@ MonoBehaviour:
   endWin: {fileID: 1188811952}
   endLose: {fileID: 1048167860}
   credits: {fileID: 1850914459}
+  isOperator: 0
   canvases:
   - {fileID: 0}
   - {fileID: 0}
@@ -7672,6 +7679,7 @@ MonoBehaviour:
   endWin: {fileID: 1188811952}
   endLose: {fileID: 1048167860}
   credits: {fileID: 1850914459}
+  isOperator: 0
   canvases:
   - {fileID: 0}
   - {fileID: 0}
@@ -8121,6 +8129,7 @@ MonoBehaviour:
   endWin: {fileID: 1188811952}
   endLose: {fileID: 1048167860}
   credits: {fileID: 1850914459}
+  isOperator: 0
   canvases:
   - {fileID: 0}
   - {fileID: 0}
