@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
     {
         #region Jump
         //If player is allowed to jump...
-        if (canJump == true)
+        if (canJump == true && !safeZone)
         {
             // ...if player presses space... 
             if (Input.GetKeyDown(KeyCode.Space))
@@ -69,6 +69,7 @@ public class Player : MonoBehaviour
             // ...then, move horizontally based on the horizontal input; do NOT affect vertical movement.
             rigBody.velocity = new Vector2(moveHori * 3.75f, rigBody.velocity.y);
         }
+
         else
         {
             rigBody.velocity = new Vector2(5, rigBody.velocity.y);

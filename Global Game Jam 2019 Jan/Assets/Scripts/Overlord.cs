@@ -50,7 +50,7 @@ public class Overlord : MonoBehaviour
     private void Update()
     {
         // ...as long as the player isn't in a safe zone...
-        if (playerRef.safeZone == false || freezeScore == false)
+        if (playerRef.safeZone == false && freezeScore == false)
         {
             // ...increase score in accordance with the difference in time between frames...
             score += Time.deltaTime;
@@ -93,6 +93,8 @@ public class Overlord : MonoBehaviour
         {
             freezeScore = true;
         }
+
+        else freezeScore = false;
         #endregion
 
         //sets variable to list length
