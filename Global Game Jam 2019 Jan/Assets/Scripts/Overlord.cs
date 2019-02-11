@@ -9,6 +9,7 @@ public class Overlord : MonoBehaviour
     #region Variables
     //Referenced
     public float score;
+    public bool freezeScore;
     public Text displayScore;
     public Player playerRef;
     public GameObject houseSpawnerRef;
@@ -49,7 +50,7 @@ public class Overlord : MonoBehaviour
     private void Update()
     {
         // ...as long as the player isn't in a safe zone...
-        if (playerRef.safeZone == false)
+        if (playerRef.safeZone == false || freezeScore == false)
         {
             // ...increase score in accordance with the difference in time between frames...
             score += Time.deltaTime;
@@ -90,10 +91,7 @@ public class Overlord : MonoBehaviour
 
         if (framesStopped >= 2 && playerRef.safeZone == false)
         {
-            deathEffect.Play();
-            SceneManager.LoadScene("Game_Over_Lose");
-            // StartCoroutine("soundTime");
-
+            freezeScore = true;
         }
         #endregion
 
