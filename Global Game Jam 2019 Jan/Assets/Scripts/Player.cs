@@ -123,6 +123,10 @@ public class Player : MonoBehaviour
         {
             safeZone = false;
         }
+        if (collision.tag == "Block")
+        {
+            collision.isTrigger = false;
+        }
     }
 }
 
