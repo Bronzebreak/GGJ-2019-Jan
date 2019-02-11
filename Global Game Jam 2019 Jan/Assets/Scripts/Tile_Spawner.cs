@@ -6,15 +6,16 @@ public class Tile_Spawner : MonoBehaviour
 {
     public GameObject[] spawnedItems;
     public GameObject spawnerRef;
-    public float spawnDelay;
-    public float delayTimer;
+    public GameObject itemsRefTest;
+    //public float spawnDelay;S
+    //public float delayTimer;
     public Player playerRef;
     private bool canSpawn;
     //float xPosition  = 0;
     Vector3 newPosition;
     void start()
     {
-        
+        newPosition = itemsRefTest.transform.position;
     }
 
     //Multiple times a frame...
@@ -36,12 +37,14 @@ public class Tile_Spawner : MonoBehaviour
             // ...spawn can be called.
             canSpawn = true;
         }
+        newPosition = itemsRefTest.transform.position;
     }
 
     //When function is called...
     void Spawn()
     {
-        newPosition = new Vector3(22.5f,-4.517f,0);
+        newPosition.x += 22.5f;
+        newPosition.y = -4.517f;
         // ...if the player is not in the house...
         if (playerRef.safeZone == false)
         {
@@ -50,15 +53,16 @@ public class Tile_Spawner : MonoBehaviour
 
             // ...and run the function again after the publicly set spawnDelay.
             //Invoke("Spawn", spawnDelay);
-            for (int i = 0; i <21; i++) 
+            for (int i = 0; i <50; i++) 
             {
                 
                 Instantiate(spawnedItems[Random.Range(0, spawnedItems.GetLength(0))], newPosition, Quaternion.identity);
                 newPosition.x +=9.0f;
                 //transform.position = newPosition;
-                print(newPosition);
+                //print(newPosition);
             }
         }
+
 
     }
 }

@@ -7,18 +7,33 @@ public class Destroyer : MonoBehaviour
 {
     public GameObject houseSpawnerRef;
     public GameObject itemsRefTest;
+    
+    Vector3 housePosition;
+
 
     //player death audio
     public AudioSource deathEffect;
+    
+
+
+    void start() 
+    {
+        housePosition = itemsRefTest.transform.position;
+        housePosition.y = -4.517f;
+    }
 
     //If collision with a trigger occurs...
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "House")
         {
-            itemsRefTest.transform.parent = houseSpawnerRef.transform;
-            itemsRefTest.transform.position = houseSpawnerRef.transform.position;
+            //itemsRefTest.transform.parent = houseSpawnerRef.transform;
+            //itemsRefTest.transform.position = houseSpawnerRef.transform.position;
+            housePosition.x += 486;
+            housePosition.y = -3.11f;
+            itemsRefTest.transform.position = housePosition;
             
+            print(housePosition);
         }
 
         // ...if it's the player...
