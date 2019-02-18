@@ -127,7 +127,7 @@ public class Overlord : MonoBehaviour
             b = i;
 
             // ...and if the name matches...
-            if (playerRef.itemName.Contains(obj[i].name))
+            if (obj[i].name.Contains(playerRef.itemName))
             {
                 // ...set the item to active...
                 obj[i].gameObject.SetActive(true);

@@ -103,6 +103,7 @@ public class Player : MonoBehaviour
         {
             //sets variable value equal to object name
             itemName = collision.gameObject.name;
+            print(itemName);
 
             //calls function in overlord
             overlordReference.CheckItem();
