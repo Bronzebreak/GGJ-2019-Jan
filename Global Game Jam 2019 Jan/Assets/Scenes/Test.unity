@@ -2863,14 +2863,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  time: 0
+  timeMinutes: 0
+  timeSeconds: 0
   freezeScore: 0
   playerRef: {fileID: 1554051952}
   SpawnerRef: {fileID: 1595709851}
   cameraRefTest: {fileID: 984978032}
   itemsRefTest: {fileID: 1610237042}
   displayScore: {fileID: 188603598}
-  timeText: {fileID: 0}
+  timeText: {fileID: 2035055822}
   playerFinalscoreText: {fileID: 0}
   obj:
   - {fileID: 331842543}
@@ -4013,7 +4014,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1188811953
 MonoBehaviour:
   m_ObjectHideFlags: 0

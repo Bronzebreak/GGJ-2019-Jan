@@ -28,7 +28,6 @@ public class Player : MonoBehaviour
     public AudioSource bGM;
     #endregion
 
-
     void Start()
     {
         //Retrieves the rigidbody component attached to this game object.

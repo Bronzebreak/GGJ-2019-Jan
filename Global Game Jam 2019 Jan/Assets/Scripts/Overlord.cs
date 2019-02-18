@@ -9,7 +9,8 @@ public class Overlord : MonoBehaviour
     #region Variables
     //Referenced
     public float score;
-    public float time;
+    public float timeMinutes;
+    public float timeSeconds;
     public bool freezeScore;
     public Player playerRef;
     public Spawner SpawnerRef;
@@ -50,7 +51,14 @@ public class Overlord : MonoBehaviour
     private void Update()
     {
         // ...count up the time based off the difference in time between frames.
-        time += Time.deltaTime;
+        timeSeconds += Time.deltaTime;
+        if(timeSeconds >= 60)
+        {
+            timeMinutes++;
+            timeSeconds = 0;
+        }
+
+        timeText.text = "Time Taken \n" + ((int)timeMinutes).ToString() + "m " + ((int)timeSeconds).ToString() + "s";
 
         // ...as long as the player isn't in a safe zone...
         if (playerRef.safeZone == false && freezeScore == false)
@@ -143,18 +151,6 @@ public class Overlord : MonoBehaviour
         }
     }
 
-    //public void display()
-    //{
-        //player text update
-       // if (SceneManager.GetActiveScene().name == ("Game_Over_Lose"))
-           // {
-               // displayScore = GameObject.Find("score").GetComponent<Text>();
-
-           // score = SetFloat.Find("score");
-
-            //score.GetComponent<Text>().text = "score" + theScore;
-           // }
-    //}
     #region Hotkey Functionality
     //When function is called...
     public void RestartGame()
@@ -170,19 +166,6 @@ public class Overlord : MonoBehaviour
         Application.Quit();
     }
     #endregion
-    public void Awake()
-    {
-        if (refrence == null)
-        {
-            refrence = displayScore.gameObject;
-            refrence = playerRef.gameObject;
-            //DontDestroyOnLoad(displayScore.gameObject);
-        }
-        else if (refrence != displayScore)
-            Destroy(displayScore.gameObject);
-    }
-
-
 }
 
 
