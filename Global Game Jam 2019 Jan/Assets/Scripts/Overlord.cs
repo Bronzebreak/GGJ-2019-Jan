@@ -177,8 +177,10 @@ public class Overlord : MonoBehaviour
     */
         foreach(GameObject collectible in obj)
         {
+            print("2");
             if (playerRef.itemName == collectible.name)
             {
+                print("3");
                 collectible.gameObject.SetActive(true);
             }
         }

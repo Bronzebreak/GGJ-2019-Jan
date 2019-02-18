@@ -103,24 +103,29 @@ public class Player : MonoBehaviour
         {
             //sets variable value equal to object name
             itemName = collision.gameObject.name;
-
+            print("1");
             //calls function in overlord
             overlordReference.CheckItem();
-
+            print("4");
             //print(itemName);
             foreach (GameObject arrayObject in spawnerReference.collectiblesList)
             {
+                print("5");
                 if (itemName.Contains(arrayObject.name))
                 {
+                    print("6");
                     itemToRemove = arrayObject;
+                    print("7");
                 }
             }
             spawnerReference.collectiblesList.Remove(itemToRemove);
+            print("8");
             overlordReference.score += 10;
+            print("9");
             Destroy(collision.gameObject);
-
+            print("10");
             collectiblesCollected++;
-
+            print("11");
             //play collect sound
             collectEffect.Play();
         }
