@@ -13,8 +13,8 @@ public class LoadLevel : MonoBehaviour
     public GameObject endLose;
     public GameObject credits;
     public bool isOperator = false;
-    public bool gameOverLose;
-    public bool gameOverWin;
+    public bool gameOverLose = false;
+    public bool gameOverWin = false;
 
     public GameObject[] canvases = new GameObject[5];
 

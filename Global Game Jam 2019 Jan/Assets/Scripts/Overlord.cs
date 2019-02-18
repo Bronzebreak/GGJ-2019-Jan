@@ -9,28 +9,29 @@ public class Overlord : MonoBehaviour
     #region Variables
     //Collectibles
     //playerRef.collectiblesCollected (int);
-    public Text loseCollectibles;
     public Text winCollectibles;
+    public Text loseCollectibles;
 
     //Score
     public float score;
     public bool freezeScore;
     public Text displayScore;
-    public Text loseScore;
     public Text winScore;
+    public Text loseScore;
 
     //Time
     public float timeMinutes;
     public float timeSeconds;
     public Text timeText;
-    public Text loseTimeText;
     public Text winTimeText;
+    public Text loseTimeText;
 
     public Text finalScoreText;
 
     //References
     public Player playerRef;
     public Spawner SpawnerRef;
+    public LoadLevel levelReferencer;
 
     //Move Detection
     private Vector3 previousPosition;
@@ -61,15 +62,19 @@ public class Overlord : MonoBehaviour
     //Once a frame...
     private void Update()
     {
-        // ...count up the time based off the difference in time between frames.
-        timeSeconds += Time.deltaTime;
-        if (timeSeconds >= 60)
+        if (levelReferencer.gameOverWin == false && levelReferencer.gameOverLose == false)
         {
-            timeMinutes++;
-            timeSeconds = 0;
-        }
+            // ...count up the time based off the difference in time between frames.
+            timeSeconds += Time.deltaTime;
 
-        timeText.text = "Time Taken \n" + ((int)timeMinutes).ToString() + "m " + ((int)timeSeconds).ToString() + "s";
+            if (timeSeconds >= 60)
+            {
+                timeMinutes++;
+                timeSeconds = 0;
+            }
+
+            timeText.text = "Time Taken \n" + ((int)timeMinutes).ToString() + "m " + ((int)timeSeconds).ToString() + "s";
+        }
 
         // ...as long as the player isn't in a safe zone...
         if (playerRef.safeZone == false && freezeScore == false)
