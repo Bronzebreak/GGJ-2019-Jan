@@ -495,7 +495,7 @@ GameObject:
   - component: {fileID: 175386697}
   - component: {fileID: 175386698}
   m_Layer: 0
-  m_Name: Vase
+  m_Name: Vase(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 249744326}
   - component: {fileID: 249744327}
   m_Layer: 0
-  m_Name: Pizza  Box
+  m_Name: Pizza  Box(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -904,7 +904,7 @@ GameObject:
   - component: {fileID: 323284128}
   - component: {fileID: 323284129}
   m_Layer: 0
-  m_Name: Fish Bowl
+  m_Name: Fish Bowl(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1129,7 +1129,7 @@ GameObject:
   - component: {fileID: 331842544}
   - component: {fileID: 331842545}
   m_Layer: 0
-  m_Name: Beacer
+  m_Name: Beacer(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1204,7 +1204,7 @@ GameObject:
   - component: {fileID: 374246021}
   - component: {fileID: 374246022}
   m_Layer: 0
-  m_Name: Desk
+  m_Name: Desk(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2699,7 +2699,7 @@ GameObject:
   - component: {fileID: 989259793}
   - component: {fileID: 989259794}
   m_Layer: 0
-  m_Name: Record Player
+  m_Name: Record Player(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2774,7 +2774,7 @@ GameObject:
   - component: {fileID: 1009227832}
   - component: {fileID: 1009227833}
   m_Layer: 0
-  m_Name: Books
+  m_Name: Books(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3331,7 +3331,7 @@ Prefab:
     - target: {fileID: 114969210396474708, guid: 8fb68d26b0bc08f42bfd96db502319ed,
         type: 2}
       propertyPath: spawnDelay
-      value: 20
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114969210396474708, guid: 8fb68d26b0bc08f42bfd96db502319ed,
         type: 2}
@@ -3445,8 +3445,7 @@ Prefab:
         type: 2}
       propertyPath: collectiblesList.Array.data[18]
       value: 
-      objectReference: {fileID: 1439574757707528, guid: b2947a6fac825564d892294d346679fa,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 114969210396474708, guid: 8fb68d26b0bc08f42bfd96db502319ed,
         type: 2}
       propertyPath: collectiblesList.Array.data[19]
@@ -3541,7 +3540,7 @@ GameObject:
   - component: {fileID: 1151533754}
   - component: {fileID: 1151533755}
   m_Layer: 0
-  m_Name: Mirror
+  m_Name: Mirror(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3616,7 +3615,7 @@ GameObject:
   - component: {fileID: 1167889720}
   - component: {fileID: 1167889721}
   m_Layer: 0
-  m_Name: Dress
+  m_Name: Dress(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4018,7 +4017,7 @@ GameObject:
   - component: {fileID: 1226364387}
   - component: {fileID: 1226364388}
   m_Layer: 0
-  m_Name: Painting
+  m_Name: Painting(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4093,7 +4092,7 @@ GameObject:
   - component: {fileID: 1252323236}
   - component: {fileID: 1252323237}
   m_Layer: 0
-  m_Name: Dragon Head
+  m_Name: Dragon Head(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4318,7 +4317,7 @@ GameObject:
   - component: {fileID: 1360243778}
   - component: {fileID: 1360243779}
   m_Layer: 0
-  m_Name: Pop Can
+  m_Name: Pop Can(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4393,7 +4392,7 @@ GameObject:
   - component: {fileID: 1366637649}
   - component: {fileID: 1366637650}
   m_Layer: 0
-  m_Name: Trophy
+  m_Name: Trophy(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5041,7 +5040,7 @@ GameObject:
   - component: {fileID: 1530309555}
   - component: {fileID: 1530309554}
   m_Layer: 0
-  m_Name: Game Console
+  m_Name: Game Console(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5116,7 +5115,7 @@ GameObject:
   - component: {fileID: 1552373004}
   - component: {fileID: 1552373005}
   m_Layer: 0
-  m_Name: Fire Place
+  m_Name: Fire Place(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5573,10 +5572,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9dbe87a6959bd34e97357ed142e60c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlordReference: {fileID: 0}
-  spawnReference: {fileID: 0}
+  overlordReference: {fileID: 1819694251}
+  spawnerReference: {fileID: 1595709851}
   itemName: 
   collectiblesCollected: 0
+  itemToRemove: {fileID: 0}
   moveRight: 100
   moveLeft: 97
   horizontalAxis: Horizontal1
@@ -5859,7 +5859,7 @@ GameObject:
   - component: {fileID: 1591685022}
   - component: {fileID: 1591685023}
   m_Layer: 0
-  m_Name: Bed
+  m_Name: Bed(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6074,7 +6074,7 @@ GameObject:
   - component: {fileID: 1624512843}
   - component: {fileID: 1624512844}
   m_Layer: 0
-  m_Name: TV
+  m_Name: TV(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7467,7 +7467,7 @@ GameObject:
   - component: {fileID: 1887943244}
   - component: {fileID: 1887943245}
   m_Layer: 0
-  m_Name: Corgi Plush
+  m_Name: Corgi Plush(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7767,7 +7767,7 @@ GameObject:
   - component: {fileID: 1980625398}
   - component: {fileID: 1980625399}
   m_Layer: 0
-  m_Name: Photo
+  m_Name: Photo(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7919,7 +7919,7 @@ GameObject:
   - component: {fileID: 2057871431}
   - component: {fileID: 2057871432}
   m_Layer: 0
-  m_Name: Toy truck
+  m_Name: Toy truck(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

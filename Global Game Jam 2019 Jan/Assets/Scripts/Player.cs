@@ -9,9 +9,10 @@ public class Player : MonoBehaviour
     //Externally Referenced Variables
     private Rigidbody2D rigBody;
     public Overlord overlordReference;
-    public Spawner spawnReference;
+    public Spawner spawnerReference;
     public string itemName;
     public int collectiblesCollected;
+    public GameObject itemToRemove;
 
     //Action Variables
     public KeyCode moveRight;
@@ -102,11 +103,19 @@ public class Player : MonoBehaviour
         {
             //sets variable value equal to object name
             itemName = collision.gameObject.name;
-            //print(itemName);
 
             //calls function in overlord
             overlordReference.CheckItem();
 
+            //print(itemName);
+            foreach (GameObject arrayObject in spawnerReference.collectiblesList)
+            {
+                if (itemName.Contains(arrayObject.name))
+                {
+                    itemToRemove = arrayObject;
+                }
+            }
+            spawnerReference.collectiblesList.Remove(itemToRemove);
             overlordReference.score += 10;
             Destroy(collision.gameObject);
 

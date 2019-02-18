@@ -62,17 +62,23 @@ public class Overlord : MonoBehaviour
     //Once a frame...
     private void Update()
     {
+        // ...if not in the gameOver states...
         if (levelReferencer.gameOverWin == false && levelReferencer.gameOverLose == false)
         {
             // ...count up the time based off the difference in time between frames.
             timeSeconds += Time.deltaTime;
 
+            // ...then, if time is greater than or equal to 60...
             if (timeSeconds >= 60)
             {
+                // ...add to the minute timer...
                 timeMinutes++;
+
+                // ...and reset the second timer.
                 timeSeconds = 0;
             }
 
+            // ...then, update the time text.
             timeText.text = "Time Taken \n" + ((int)timeMinutes).ToString() + "m " + ((int)timeSeconds).ToString() + "s";
         }
 
@@ -137,13 +143,14 @@ public class Overlord : MonoBehaviour
 
         if (playerRef.collectiblesCollected >= 20)
         {
-            SceneManager.LoadScene("Game_Over_Win");
+            levelReferencer.gameOverWin = true;
         }
     }
 
     //When function is called...
     public void CheckItem()
     {
+        /*
         // ...check list until the end of it...
         for (int i = 0; i < obj.Length; i++)
         {
@@ -158,6 +165,7 @@ public class Overlord : MonoBehaviour
 
                 // ...then, empty the list element to prevent respawns.
                 SpawnerRef.collectiblesList[b] = null;
+                SpawnerRef.collectiblesList.RemoveAt(b);
             }
 
             else
@@ -165,6 +173,16 @@ public class Overlord : MonoBehaviour
                 b = i;
             }
         }
+
+    */
+        foreach(GameObject collectible in obj)
+        {
+            if (playerRef.itemName == collectible.name)
+            {
+                collectible.gameObject.SetActive(true);
+            }
+        }
+
     }
 
     #region Hotkey Functionality
