@@ -102,7 +102,7 @@ public class Player : MonoBehaviour
         {
             //sets variable value equal to object name
             itemName = collision.gameObject.name;
-            print(itemName);
+            //print(itemName);
 
             //calls function in overlord
             overlordReference.CheckItem();
@@ -122,10 +122,12 @@ public class Player : MonoBehaviour
         if (collision.gameObject.name.ToLower().Contains("home"))
         {
             safeZone = false;
+            print("SafeZone");
         }
         if (collision.tag == "Block")
         {
             collision.isTrigger = false;
+            print("block");
         }
     }
 }

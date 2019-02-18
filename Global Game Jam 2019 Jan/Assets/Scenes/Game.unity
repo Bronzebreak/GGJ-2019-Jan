@@ -154,7 +154,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1312021228184086, guid: 24eed6f0a044b1546826efe597b5db8b, type: 2}
       propertyPath: m_Name
-      value: Photo
+      value: Photo(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 212685704585261442, guid: 24eed6f0a044b1546826efe597b5db8b,
         type: 2}
@@ -176,6 +176,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24eed6f0a044b1546826efe597b5db8b, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &8763577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1312021228184086, guid: 24eed6f0a044b1546826efe597b5db8b,
+    type: 2}
+  m_PrefabInternal: {fileID: 8763576}
 --- !u!1001 &114858461
 Prefab:
   m_ObjectHideFlags: 0
@@ -217,7 +222,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1711971062389638, guid: dca3cf052b786d54ab34d4c181901f69, type: 2}
       propertyPath: m_Name
-      value: Trophy
+      value: Trophy(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 212593377727125214, guid: dca3cf052b786d54ab34d4c181901f69,
         type: 2}
@@ -239,6 +244,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca3cf052b786d54ab34d4c181901f69, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &114858462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1711971062389638, guid: dca3cf052b786d54ab34d4c181901f69,
+    type: 2}
+  m_PrefabInternal: {fileID: 114858461}
 --- !u!1 &131813880
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,7 +417,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1962907316000888, guid: b577e72c16dc3cf4bb1acfea42fe4dd2, type: 2}
       propertyPath: m_Name
-      value: Fish Bowl
+      value: Fish Bowl(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 212528217765381718, guid: b577e72c16dc3cf4bb1acfea42fe4dd2,
         type: 2}
@@ -429,6 +439,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b577e72c16dc3cf4bb1acfea42fe4dd2, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &176655863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1962907316000888, guid: b577e72c16dc3cf4bb1acfea42fe4dd2,
+    type: 2}
+  m_PrefabInternal: {fileID: 176655862}
 --- !u!1001 &217132909
 Prefab:
   m_ObjectHideFlags: 0
@@ -785,7 +800,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1026800568878564, guid: 2109f19b365ee9c46841cc9f7bd9c81a, type: 2}
       propertyPath: m_Name
-      value: Corgi Plush
+      value: Corgi Plush(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 212513834582480818, guid: 2109f19b365ee9c46841cc9f7bd9c81a,
         type: 2}
@@ -807,6 +822,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2109f19b365ee9c46841cc9f7bd9c81a, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &346890904 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1026800568878564, guid: 2109f19b365ee9c46841cc9f7bd9c81a,
+    type: 2}
+  m_PrefabInternal: {fileID: 346890903}
 --- !u!1001 &389174631
 Prefab:
   m_ObjectHideFlags: 0
@@ -1021,7 +1041,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1327930531111176, guid: 125db755ce2959b4cbe937e29c334b45, type: 2}
       propertyPath: m_Name
-      value: Game Console
+      value: Game Console(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 212921443084866068, guid: 125db755ce2959b4cbe937e29c334b45,
         type: 2}
@@ -1043,6 +1063,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 125db755ce2959b4cbe937e29c334b45, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &421703230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1327930531111176, guid: 125db755ce2959b4cbe937e29c334b45,
+    type: 2}
+  m_PrefabInternal: {fileID: 421703229}
 --- !u!1001 &469071975
 Prefab:
   m_ObjectHideFlags: 0
@@ -1084,7 +1109,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1277542414523072, guid: 1f730d08d69655043aa2a6e6e7f56259, type: 2}
       propertyPath: m_Name
-      value: Fire Place
+      value: Fire Place(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 212986559380160126, guid: 1f730d08d69655043aa2a6e6e7f56259,
         type: 2}
@@ -1106,6 +1131,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f730d08d69655043aa2a6e6e7f56259, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &469071976 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1277542414523072, guid: 1f730d08d69655043aa2a6e6e7f56259,
+    type: 2}
+  m_PrefabInternal: {fileID: 469071975}
 --- !u!1001 &536529122
 Prefab:
   m_ObjectHideFlags: 0
@@ -1147,7 +1177,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1347157054010572, guid: 3664ee0b0f2859843b9ff5474bdd0740, type: 2}
       propertyPath: m_Name
-      value: Bed
+      value: Bed(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 212517355746850106, guid: 3664ee0b0f2859843b9ff5474bdd0740,
         type: 2}
@@ -1169,6 +1199,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3664ee0b0f2859843b9ff5474bdd0740, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &536529123 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1347157054010572, guid: 3664ee0b0f2859843b9ff5474bdd0740,
+    type: 2}
+  m_PrefabInternal: {fileID: 536529122}
 --- !u!1001 &615206949
 Prefab:
   m_ObjectHideFlags: 0
@@ -1210,7 +1245,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1599895272786678, guid: 28daf98a909c96d4c89ee9113d392590, type: 2}
       propertyPath: m_Name
-      value: Desk
+      value: Desk(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 212287904857696766, guid: 28daf98a909c96d4c89ee9113d392590,
         type: 2}
@@ -1232,6 +1267,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28daf98a909c96d4c89ee9113d392590, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &615206950 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1599895272786678, guid: 28daf98a909c96d4c89ee9113d392590,
+    type: 2}
+  m_PrefabInternal: {fileID: 615206949}
 --- !u!1001 &724818460
 Prefab:
   m_ObjectHideFlags: 0
@@ -1518,7 +1558,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1869210997447256, guid: 9e1320affcf86cf4d839c6283db50cea, type: 2}
       propertyPath: m_Name
-      value: Dress
+      value: Dress(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 212366192592946320, guid: 9e1320affcf86cf4d839c6283db50cea,
         type: 2}
@@ -1540,6 +1580,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e1320affcf86cf4d839c6283db50cea, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &907563994 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1869210997447256, guid: 9e1320affcf86cf4d839c6283db50cea,
+    type: 2}
+  m_PrefabInternal: {fileID: 907563993}
 --- !u!1 &911235787 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1598152251532560, guid: 2cb3fcb5f196a9749a4934e3d507bed3,
@@ -2049,7 +2094,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1140840974614548, guid: 1b52d2b0636ffda48b4e1f2c1b48a9d7, type: 2}
       propertyPath: m_Name
-      value: Pizza  Box
+      value: Pizza  Box(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 212172227323484254, guid: 1b52d2b0636ffda48b4e1f2c1b48a9d7,
         type: 2}
@@ -2071,6 +2116,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b52d2b0636ffda48b4e1f2c1b48a9d7, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1112659807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1140840974614548, guid: 1b52d2b0636ffda48b4e1f2c1b48a9d7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1112659806}
 --- !u!1 &1193213258
 GameObject:
   m_ObjectHideFlags: 0
@@ -2363,7 +2413,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1934722895022494, guid: 97f270af1f9d02644a0be81f83392623, type: 2}
       propertyPath: m_Name
-      value: Toy truck
+      value: Toy truck(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 212149623748702392, guid: 97f270af1f9d02644a0be81f83392623,
         type: 2}
@@ -2385,6 +2435,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97f270af1f9d02644a0be81f83392623, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1243752884 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1934722895022494, guid: 97f270af1f9d02644a0be81f83392623,
+    type: 2}
+  m_PrefabInternal: {fileID: 1243752883}
 --- !u!1001 &1308153092
 Prefab:
   m_ObjectHideFlags: 0
@@ -2468,7 +2523,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1557183994912428, guid: 9df9fd8902a05e740969c65d7cbb8d1c, type: 2}
       propertyPath: m_Name
-      value: TV
+      value: TV(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 212520641008025778, guid: 9df9fd8902a05e740969c65d7cbb8d1c,
         type: 2}
@@ -2490,6 +2545,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9df9fd8902a05e740969c65d7cbb8d1c, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1349373917 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1557183994912428, guid: 9df9fd8902a05e740969c65d7cbb8d1c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1349373916}
 --- !u!1 &1452866645
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,7 +2619,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1505167622791790, guid: 5f0e545e2737a624da0b79486c110f9b, type: 2}
       propertyPath: m_Name
-      value: Mirror
+      value: Mirror(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 212249225038798970, guid: 5f0e545e2737a624da0b79486c110f9b,
         type: 2}
@@ -2581,6 +2641,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f0e545e2737a624da0b79486c110f9b, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1473429221 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1505167622791790, guid: 5f0e545e2737a624da0b79486c110f9b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1473429220}
 --- !u!1001 &1488254801
 Prefab:
   m_ObjectHideFlags: 0
@@ -2694,7 +2759,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1906236348678446, guid: cbdfd87a7d3b8434aa633f9aab3bccd8, type: 2}
       propertyPath: m_Name
-      value: Painting
+      value: Painting(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 212438765528657916, guid: cbdfd87a7d3b8434aa633f9aab3bccd8,
         type: 2}
@@ -2716,6 +2781,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbdfd87a7d3b8434aa633f9aab3bccd8, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1529968299 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1906236348678446, guid: cbdfd87a7d3b8434aa633f9aab3bccd8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1529968298}
 --- !u!1001 &1557287464
 Prefab:
   m_ObjectHideFlags: 0
@@ -2879,7 +2949,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1797601254138502, guid: 6882798cc83e5f94f979d7b0dd5a5f8e, type: 2}
       propertyPath: m_Name
-      value: Pop Can
+      value: Pop Can(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 212166781872559198, guid: 6882798cc83e5f94f979d7b0dd5a5f8e,
         type: 2}
@@ -2901,6 +2971,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6882798cc83e5f94f979d7b0dd5a5f8e, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1625242945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1797601254138502, guid: 6882798cc83e5f94f979d7b0dd5a5f8e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1625242944}
 --- !u!4 &1638100787 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4687017090264798, guid: 8fb68d26b0bc08f42bfd96db502319ed,
@@ -2947,7 +3022,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1304372285300528, guid: b69ad7ea42cc1d441a1a6ac161285aeb, type: 2}
       propertyPath: m_Name
-      value: Books
+      value: Books(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 212970585665893210, guid: b69ad7ea42cc1d441a1a6ac161285aeb,
         type: 2}
@@ -2969,6 +3044,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b69ad7ea42cc1d441a1a6ac161285aeb, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1638831755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1304372285300528, guid: b69ad7ea42cc1d441a1a6ac161285aeb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1638831754}
 --- !u!1001 &1648289808
 Prefab:
   m_ObjectHideFlags: 0
@@ -3010,7 +3090,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1538775571164302, guid: 0f22ec1687108ce47aeef526e1101e12, type: 2}
       propertyPath: m_Name
-      value: Beacer
+      value: Beacer(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 212567028061525946, guid: 0f22ec1687108ce47aeef526e1101e12,
         type: 2}
@@ -3032,6 +3112,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f22ec1687108ce47aeef526e1101e12, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1648289809 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1538775571164302, guid: 0f22ec1687108ce47aeef526e1101e12,
+    type: 2}
+  m_PrefabInternal: {fileID: 1648289808}
 --- !u!1001 &1716320150
 Prefab:
   m_ObjectHideFlags: 0
@@ -3073,7 +3158,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1211183114399802, guid: f1da5932a76b8d047bb862c15d98453a, type: 2}
       propertyPath: m_Name
-      value: Dragon Head
+      value: Dragon Head(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 212158519913772598, guid: f1da5932a76b8d047bb862c15d98453a,
         type: 2}
@@ -3095,6 +3180,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1da5932a76b8d047bb862c15d98453a, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1716320151 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1211183114399802, guid: f1da5932a76b8d047bb862c15d98453a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1716320150}
 --- !u!1 &1878172985
 GameObject:
   m_ObjectHideFlags: 0
@@ -3198,37 +3288,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 438c45676a04b98479982046ca33bee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loseCollectibles: {fileID: 0}
+  winCollectibles: {fileID: 0}
   score: 0
-  time: 0
   freezeScore: 0
+  displayScore: {fileID: 1878172987}
+  loseScore: {fileID: 0}
+  winScore: {fileID: 0}
+  timeMinutes: 0
+  timeSeconds: 0
+  timeText: {fileID: 0}
+  loseTimeText: {fileID: 0}
+  winTimeText: {fileID: 0}
+  finalScoreText: {fileID: 0}
   playerRef: {fileID: 1899736941}
   SpawnerRef: {fileID: 2137074292}
   cameraRefTest: {fileID: 1896359951}
   itemsRefTest: {fileID: 389174632}
-  displayScore: {fileID: 1878172987}
-  timeText: {fileID: 0}
-  playerFinalscoreText: {fileID: 0}
   obj:
-  - {fileID: 1538775571164302, guid: 0f22ec1687108ce47aeef526e1101e12, type: 2}
-  - {fileID: 1347157054010572, guid: 3664ee0b0f2859843b9ff5474bdd0740, type: 2}
-  - {fileID: 1304372285300528, guid: b69ad7ea42cc1d441a1a6ac161285aeb, type: 2}
-  - {fileID: 1797601254138502, guid: 6882798cc83e5f94f979d7b0dd5a5f8e, type: 2}
-  - {fileID: 1026800568878564, guid: 2109f19b365ee9c46841cc9f7bd9c81a, type: 2}
-  - {fileID: 1599895272786678, guid: 28daf98a909c96d4c89ee9113d392590, type: 2}
-  - {fileID: 1211183114399802, guid: f1da5932a76b8d047bb862c15d98453a, type: 2}
-  - {fileID: 1869210997447256, guid: 9e1320affcf86cf4d839c6283db50cea, type: 2}
-  - {fileID: 1277542414523072, guid: 1f730d08d69655043aa2a6e6e7f56259, type: 2}
-  - {fileID: 1505167622791790, guid: 5f0e545e2737a624da0b79486c110f9b, type: 2}
-  - {fileID: 1906236348678446, guid: cbdfd87a7d3b8434aa633f9aab3bccd8, type: 2}
-  - {fileID: 1312021228184086, guid: 24eed6f0a044b1546826efe597b5db8b, type: 2}
-  - {fileID: 1140840974614548, guid: 1b52d2b0636ffda48b4e1f2c1b48a9d7, type: 2}
-  - {fileID: 1760303193583030, guid: de416f61ebe0bb74ebb4ae0d28610944, type: 2}
-  - {fileID: 1934722895022494, guid: 97f270af1f9d02644a0be81f83392623, type: 2}
-  - {fileID: 1711971062389638, guid: dca3cf052b786d54ab34d4c181901f69, type: 2}
-  - {fileID: 1962907316000888, guid: b577e72c16dc3cf4bb1acfea42fe4dd2, type: 2}
-  - {fileID: 1557183994912428, guid: 9df9fd8902a05e740969c65d7cbb8d1c, type: 2}
-  - {fileID: 1439574757707528, guid: b2947a6fac825564d892294d346679fa, type: 2}
-  - {fileID: 1327930531111176, guid: 125db755ce2959b4cbe937e29c334b45, type: 2}
+  - {fileID: 1648289809}
+  - {fileID: 536529123}
+  - {fileID: 1638831755}
+  - {fileID: 1625242945}
+  - {fileID: 346890904}
+  - {fileID: 615206950}
+  - {fileID: 1716320151}
+  - {fileID: 907563994}
+  - {fileID: 469071976}
+  - {fileID: 1473429221}
+  - {fileID: 1529968299}
+  - {fileID: 8763577}
+  - {fileID: 1112659807}
+  - {fileID: 1955531781}
+  - {fileID: 1243752884}
+  - {fileID: 114858462}
+  - {fileID: 176655863}
+  - {fileID: 1349373917}
+  - {fileID: 1959206452}
+  - {fileID: 421703230}
   deathEffect: {fileID: 1881495360}
 --- !u!4 &1881495359
 Transform:
@@ -3985,7 +4082,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1760303193583030, guid: de416f61ebe0bb74ebb4ae0d28610944, type: 2}
       propertyPath: m_Name
-      value: Record Player
+      value: Record Player(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 212288271218539374, guid: de416f61ebe0bb74ebb4ae0d28610944,
         type: 2}
@@ -4007,6 +4104,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de416f61ebe0bb74ebb4ae0d28610944, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1955531781 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1760303193583030, guid: de416f61ebe0bb74ebb4ae0d28610944,
+    type: 2}
+  m_PrefabInternal: {fileID: 1955531780}
 --- !u!1001 &1959206451
 Prefab:
   m_ObjectHideFlags: 0
@@ -4048,7 +4150,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1439574757707528, guid: b2947a6fac825564d892294d346679fa, type: 2}
       propertyPath: m_Name
-      value: Vase
+      value: Vase(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 212327983261795170, guid: b2947a6fac825564d892294d346679fa,
         type: 2}
@@ -4070,6 +4172,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2947a6fac825564d892294d346679fa, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1959206452 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1439574757707528, guid: b2947a6fac825564d892294d346679fa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1959206451}
 --- !u!4 &2006574767 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4684790568463316, guid: c9aaff622999c274885a62e243509aa1,
