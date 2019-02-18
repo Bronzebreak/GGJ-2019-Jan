@@ -7,11 +7,28 @@ using UnityEngine.UI;
 public class Overlord : MonoBehaviour
 {
     #region Variables
-    //Referenced
+    //Collectibles
+    //playerRef.collectiblesCollected (int);
+    public Text loseCollectibles;
+    public Text winCollectibles;
+
+    //Score
     public float score;
+    public bool freezeScore;
+    public Text displayScore;
+    public Text loseScore;
+    public Text winScore;
+
+    //Time
     public float timeMinutes;
     public float timeSeconds;
-    public bool freezeScore;
+    public Text timeText;
+    public Text loseTimeText;
+    public Text winTimeText;
+
+    public Text finalScoreText;
+
+    //References
     public Player playerRef;
     public Spawner SpawnerRef;
 
@@ -25,12 +42,6 @@ public class Overlord : MonoBehaviour
     //Player reference
     public GameObject cameraRefTest;
     public GameObject itemsRefTest;
-
-    //text refernce
-    public Text displayScore;
-    public Text timeText;
-    public Text playerFinalscoreText;
-
     #endregion
 
     //Index for spawn list
@@ -52,7 +63,7 @@ public class Overlord : MonoBehaviour
     {
         // ...count up the time based off the difference in time between frames.
         timeSeconds += Time.deltaTime;
-        if(timeSeconds >= 60)
+        if (timeSeconds >= 60)
         {
             timeMinutes++;
             timeSeconds = 0;
@@ -67,7 +78,7 @@ public class Overlord : MonoBehaviour
             score += Time.deltaTime;
 
             // ...and then update the score text.
-            displayScore.text = "Score: " + ((int)(score*(100))).ToString();
+            displayScore.text = "Score: " + ((int)(score * (100))).ToString();
         }
 
         #region Hotkeys
@@ -90,7 +101,7 @@ public class Overlord : MonoBehaviour
         playerXPrevious = playerXCurrent;
         playerXCurrent = playerRef.transform.position.x;
 
-        if (Mathf.Abs(playerXPrevious-playerXCurrent) <= 0.005f)
+        if (Mathf.Abs(playerXPrevious - playerXCurrent) <= 0.005f)
         {
             //playerStopped = true;
             framesStopped += 1;
@@ -119,7 +130,7 @@ public class Overlord : MonoBehaviour
             b = 0;
         }
 
-        if(playerRef.collectiblesCollected >= 20)
+        if (playerRef.collectiblesCollected >= 20)
         {
             SceneManager.LoadScene("Game_Over_Win");
         }
@@ -135,7 +146,7 @@ public class Overlord : MonoBehaviour
             b = i;
 
             // ...and if the name matches...
-            if (obj[i].name.Contains(playerRef.itemName))
+            if (playerRef.itemName.Contains(obj[i].name))
             {
                 // ...set the item to active...
                 obj[i].gameObject.SetActive(true);

@@ -13,6 +13,8 @@ public class LoadLevel : MonoBehaviour
     public GameObject endLose;
     public GameObject credits;
     public bool isOperator = false;
+    public bool gameOverLose;
+    public bool gameOverWin;
 
     public GameObject[] canvases = new GameObject[5];
 
@@ -43,6 +45,24 @@ public class LoadLevel : MonoBehaviour
             // ...execute restarting function.
             RestartGame();
         }
+
+        if (gameOverLose)
+        {
+            canvases[0].SetActive(false);
+            canvases[1].SetActive(false);
+            canvases[2].SetActive(false);
+            canvases[3].SetActive(true);
+            canvases[4].SetActive(false);
+        }
+
+        if (gameOverWin)
+        {
+            canvases[0].SetActive(false);
+            canvases[1].SetActive(false);
+            canvases[2].SetActive(true);
+            canvases[3].SetActive(false);
+            canvases[4].SetActive(false);
+        }
     }
 
     public void LoadCanvas()
@@ -62,24 +82,6 @@ public class LoadLevel : MonoBehaviour
             canvases[1].SetActive(true);
             canvases[2].SetActive(false);
             canvases[3].SetActive(false);
-            canvases[4].SetActive(false);
-        }
-
-        else if (canvasToLoad == "endWin")
-        {
-            canvases[0].SetActive(false);
-            canvases[1].SetActive(false);
-            canvases[2].SetActive(true);
-            canvases[3].SetActive(false);
-            canvases[4].SetActive(false);
-        }
-
-        else if (canvasToLoad == "endLose")
-        {
-            canvases[0].SetActive(false);
-            canvases[1].SetActive(false);
-            canvases[2].SetActive(false);
-            canvases[3].SetActive(true);
             canvases[4].SetActive(false);
         }
 
