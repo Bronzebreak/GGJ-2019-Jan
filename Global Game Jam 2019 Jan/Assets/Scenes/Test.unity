@@ -495,7 +495,7 @@ GameObject:
   - component: {fileID: 175386697}
   - component: {fileID: 175386698}
   m_Layer: 0
-  m_Name: Vase
+  m_Name: Vase(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 249744326}
   - component: {fileID: 249744327}
   m_Layer: 0
-  m_Name: Pizza  Box
+  m_Name: Pizza  Box(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -799,7 +799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &299959840
 Transform:
   m_ObjectHideFlags: 0
@@ -905,7 +905,7 @@ GameObject:
   - component: {fileID: 323284128}
   - component: {fileID: 323284129}
   m_Layer: 0
-  m_Name: Fish Bowl
+  m_Name: Fish Bowl(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1026,6 +1026,8 @@ MonoBehaviour:
   endLose: {fileID: 1048167860}
   credits: {fileID: 1850914459}
   isOperator: 0
+  gameOverLose: 0
+  gameOverWin: 0
   canvases:
   - {fileID: 0}
   - {fileID: 0}
@@ -1128,7 +1130,7 @@ GameObject:
   - component: {fileID: 331842544}
   - component: {fileID: 331842545}
   m_Layer: 0
-  m_Name: Beacer
+  m_Name: Beacer(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1203,7 +1205,7 @@ GameObject:
   - component: {fileID: 374246021}
   - component: {fileID: 374246022}
   m_Layer: 0
-  m_Name: Desk
+  m_Name: Desk(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2203,6 +2205,8 @@ MonoBehaviour:
   endLose: {fileID: 1048167860}
   credits: {fileID: 1850914459}
   isOperator: 0
+  gameOverLose: 0
+  gameOverWin: 0
   canvases:
   - {fileID: 0}
   - {fileID: 0}
@@ -2351,6 +2355,8 @@ MonoBehaviour:
   endLose: {fileID: 1048167860}
   credits: {fileID: 1850914459}
   isOperator: 0
+  gameOverLose: 0
+  gameOverWin: 0
   canvases:
   - {fileID: 0}
   - {fileID: 0}
@@ -2694,7 +2700,7 @@ GameObject:
   - component: {fileID: 989259793}
   - component: {fileID: 989259794}
   m_Layer: 0
-  m_Name: Record Player
+  m_Name: Record Player(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2769,7 +2775,7 @@ GameObject:
   - component: {fileID: 1009227832}
   - component: {fileID: 1009227833}
   m_Layer: 0
-  m_Name: Books
+  m_Name: Books(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2862,17 +2868,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 438c45676a04b98479982046ca33bee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loseCollectibles: {fileID: 0}
+  winCollectibles: {fileID: 0}
   score: 0
+  freezeScore: 0
+  displayScore: {fileID: 188603598}
+  loseScore: {fileID: 0}
+  winScore: {fileID: 0}
   timeMinutes: 0
   timeSeconds: 0
-  freezeScore: 0
+  timeText: {fileID: 2035055822}
+  loseTimeText: {fileID: 0}
+  winTimeText: {fileID: 0}
+  finalScoreText: {fileID: 0}
   playerRef: {fileID: 1554051952}
   SpawnerRef: {fileID: 1595709851}
   cameraRefTest: {fileID: 984978032}
   itemsRefTest: {fileID: 1610237042}
-  displayScore: {fileID: 188603598}
-  timeText: {fileID: 2035055822}
-  playerFinalscoreText: {fileID: 0}
   obj:
   - {fileID: 331842543}
   - {fileID: 1591685021}
@@ -3020,7 +3032,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1048167861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3705,7 +3717,7 @@ GameObject:
   - component: {fileID: 1151533754}
   - component: {fileID: 1151533755}
   m_Layer: 0
-  m_Name: Mirror
+  m_Name: Mirror(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3780,7 +3792,7 @@ GameObject:
   - component: {fileID: 1167889720}
   - component: {fileID: 1167889721}
   m_Layer: 0
-  m_Name: Dress
+  m_Name: Dress(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4182,7 +4194,7 @@ GameObject:
   - component: {fileID: 1226364387}
   - component: {fileID: 1226364388}
   m_Layer: 0
-  m_Name: Painting
+  m_Name: Painting(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4257,7 +4269,7 @@ GameObject:
   - component: {fileID: 1252323236}
   - component: {fileID: 1252323237}
   m_Layer: 0
-  m_Name: Dragon Head
+  m_Name: Dragon Head(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4482,7 +4494,7 @@ GameObject:
   - component: {fileID: 1360243778}
   - component: {fileID: 1360243779}
   m_Layer: 0
-  m_Name: Pop Can
+  m_Name: Pop Can(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4557,7 +4569,7 @@ GameObject:
   - component: {fileID: 1366637649}
   - component: {fileID: 1366637650}
   m_Layer: 0
-  m_Name: Trophy
+  m_Name: Trophy(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4753,6 +4765,8 @@ MonoBehaviour:
   endLose: {fileID: 1048167860}
   credits: {fileID: 1850914459}
   isOperator: 0
+  gameOverLose: 0
+  gameOverWin: 0
   canvases:
   - {fileID: 0}
   - {fileID: 0}
@@ -5208,7 +5222,7 @@ GameObject:
   - component: {fileID: 1530309555}
   - component: {fileID: 1530309554}
   m_Layer: 0
-  m_Name: Game Console
+  m_Name: Game Console(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5283,7 +5297,7 @@ GameObject:
   - component: {fileID: 1552373004}
   - component: {fileID: 1552373005}
   m_Layer: 0
-  m_Name: Fire Place
+  m_Name: Fire Place(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5364,6 +5378,7 @@ GameObject:
   - component: {fileID: 1554051948}
   - component: {fileID: 1554051947}
   - component: {fileID: 1554051946}
+  - component: {fileID: 1554051954}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5797,6 +5812,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1554051954
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1554051944}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a6297328f3a6601469630614c1cc231f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1555536156
 GameObject:
   m_ObjectHideFlags: 0
@@ -6026,7 +6059,7 @@ GameObject:
   - component: {fileID: 1591685022}
   - component: {fileID: 1591685023}
   m_Layer: 0
-  m_Name: Bed
+  m_Name: Bed(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6241,7 +6274,7 @@ GameObject:
   - component: {fileID: 1624512843}
   - component: {fileID: 1624512844}
   m_Layer: 0
-  m_Name: TV
+  m_Name: TV(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6946,6 +6979,8 @@ MonoBehaviour:
   endLose: {fileID: 1048167860}
   credits: {fileID: 1850914459}
   isOperator: 0
+  gameOverLose: 0
+  gameOverWin: 0
   canvases:
   - {fileID: 0}
   - {fileID: 0}
@@ -7134,6 +7169,8 @@ MonoBehaviour:
   endLose: {fileID: 1048167860}
   credits: {fileID: 1850914459}
   isOperator: 1
+  gameOverLose: 0
+  gameOverWin: 0
   canvases:
   - {fileID: 0}
   - {fileID: 0}
@@ -7273,6 +7310,8 @@ MonoBehaviour:
   endLose: {fileID: 1048167860}
   credits: {fileID: 1850914459}
   isOperator: 0
+  gameOverLose: 0
+  gameOverWin: 0
   canvases:
   - {fileID: 0}
   - {fileID: 0}
@@ -7485,7 +7524,7 @@ GameObject:
   - component: {fileID: 1887943244}
   - component: {fileID: 1887943245}
   m_Layer: 0
-  m_Name: Corgi Plush
+  m_Name: Corgi Plush(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7681,6 +7720,8 @@ MonoBehaviour:
   endLose: {fileID: 1048167860}
   credits: {fileID: 1850914459}
   isOperator: 0
+  gameOverLose: 0
+  gameOverWin: 0
   canvases:
   - {fileID: 0}
   - {fileID: 0}
@@ -7783,7 +7824,7 @@ GameObject:
   - component: {fileID: 1980625398}
   - component: {fileID: 1980625399}
   m_Layer: 0
-  m_Name: Photo
+  m_Name: Photo(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7935,7 +7976,7 @@ GameObject:
   - component: {fileID: 2057871431}
   - component: {fileID: 2057871432}
   m_Layer: 0
-  m_Name: Toy truck
+  m_Name: Toy truck(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8131,6 +8172,8 @@ MonoBehaviour:
   endLose: {fileID: 1048167860}
   credits: {fileID: 1850914459}
   isOperator: 0
+  gameOverLose: 0
+  gameOverWin: 0
   canvases:
   - {fileID: 0}
   - {fileID: 0}
