@@ -9,9 +9,10 @@ public class Player : MonoBehaviour
     //Externally Referenced Variables
     private Rigidbody2D rigBody;
     public Overlord overlordReference;
-    public Spawner spawnReference;
+    public Spawner spawnerReference;
     public string itemName;
     public int collectiblesCollected;
+    public GameObject itemToRemove;
 
     //Action Variables
     public KeyCode moveRight;
@@ -28,7 +29,6 @@ public class Player : MonoBehaviour
     public AudioSource bGM;
     #endregion
 
-
     void Start()
     {
         //Retrieves the rigidbody component attached to this game object.
@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
     {
         #region Jump
         //If player is allowed to jump...
-        if (canJump == true)
+        if (canJump == true && !safeZone)
         {
             // ...if player presses space... 
             if (Input.GetKeyDown(KeyCode.Space))
@@ -69,6 +69,7 @@ public class Player : MonoBehaviour
             // ...then, move horizontally based on the horizontal input; do NOT affect vertical movement.
             rigBody.velocity = new Vector2(moveHori * 3.75f, rigBody.velocity.y);
         }
+
         else
         {
             rigBody.velocity = new Vector2(5, rigBody.velocity.y);
@@ -102,15 +103,29 @@ public class Player : MonoBehaviour
         {
             //sets variable value equal to object name
             itemName = collision.gameObject.name;
-
+            print("1");
             //calls function in overlord
             overlordReference.CheckItem();
-
+            print("4");
+            //print(itemName);
+            foreach (GameObject arrayObject in spawnerReference.collectiblesList)
+            {
+                print("5");
+                if (itemName.Contains(arrayObject.name))
+                {
+                    print("6");
+                    itemToRemove = arrayObject;
+                    print("7");
+                }
+            }
+            spawnerReference.collectiblesList.Remove(itemToRemove);
+            print("8");
             overlordReference.score += 10;
+            print("9");
             Destroy(collision.gameObject);
-
+            print("10");
             collectiblesCollected++;
-
+            print("11");
             //play collect sound
             collectEffect.Play();
         }
@@ -121,6 +136,12 @@ public class Player : MonoBehaviour
         if (collision.gameObject.name.ToLower().Contains("home"))
         {
             safeZone = false;
+            print("SafeZone");
+        }
+        if (collision.tag == "Block")
+        {
+            collision.isTrigger = false;
+            print("block");
         }
     }
 }

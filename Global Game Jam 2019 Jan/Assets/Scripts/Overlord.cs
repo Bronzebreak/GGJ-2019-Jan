@@ -7,12 +7,31 @@ using UnityEngine.UI;
 public class Overlord : MonoBehaviour
 {
     #region Variables
-    //Referenced
+    //Collectibles
+    //playerRef.collectiblesCollected (int);
+    public Text winCollectibles;
+    public Text loseCollectibles;
+
+    //Score
     public float score;
+    public bool freezeScore;
     public Text displayScore;
+    public Text winScore;
+    public Text loseScore;
+
+    //Time
+    public float timeMinutes;
+    public float timeSeconds;
+    public Text timeText;
+    public Text winTimeText;
+    public Text loseTimeText;
+
+    public Text finalScoreText;
+
+    //References
     public Player playerRef;
-    public GameObject houseSpawnerRef;
     public Spawner SpawnerRef;
+    public LoadLevel levelReferencer;
 
     //Move Detection
     private Vector3 previousPosition;
@@ -43,12 +62,34 @@ public class Overlord : MonoBehaviour
     //Once a frame...
     private void Update()
     {
+        // ...if not in the gameOver states...
+        if (levelReferencer.gameOverWin == false && levelReferencer.gameOverLose == false)
+        {
+            // ...count up the time based off the difference in time between frames.
+            timeSeconds += Time.deltaTime;
+
+            // ...then, if time is greater than or equal to 60...
+            if (timeSeconds >= 60)
+            {
+                // ...add to the minute timer...
+                timeMinutes++;
+
+                // ...and reset the second timer.
+                timeSeconds = 0;
+            }
+
+            // ...then, update the time text.
+            timeText.text = "Time Taken \n" + ((int)timeMinutes).ToString() + "m " + ((int)timeSeconds).ToString() + "s";
+        }
+
         // ...as long as the player isn't in a safe zone...
-        if (playerRef.safeZone == false)
+        if (playerRef.safeZone == false && freezeScore == false)
         {
             // ...increase score in accordance with the difference in time between frames...
             score += Time.deltaTime;
-            displayScore.text = "Score: " + ((int)(score*(100))).ToString();
+
+            // ...and then update the score text.
+            displayScore.text = "Score: " + ((int)(score * (100))).ToString();
         }
 
         #region Hotkeys
@@ -71,7 +112,7 @@ public class Overlord : MonoBehaviour
         playerXPrevious = playerXCurrent;
         playerXCurrent = playerRef.transform.position.x;
 
-        if (Mathf.Abs(playerXPrevious-playerXCurrent) <= 0.005f)
+        if (Mathf.Abs(playerXPrevious - playerXCurrent) <= 0.005f)
         {
             //playerStopped = true;
             framesStopped += 1;
@@ -85,11 +126,10 @@ public class Overlord : MonoBehaviour
 
         if (framesStopped >= 2 && playerRef.safeZone == false)
         {
-            deathEffect.Play();
-            SceneManager.LoadScene("Game_Over_Lose");
-            // StartCoroutine("soundTime");
-
+            freezeScore = true;
         }
+
+        else freezeScore = false;
         #endregion
 
         //sets variable to list length
@@ -101,15 +141,16 @@ public class Overlord : MonoBehaviour
             b = 0;
         }
 
-        if(playerRef.collectiblesCollected >= 20)
+        if (playerRef.collectiblesCollected >= 20)
         {
-            SceneManager.LoadScene("Game_Over_Win");
+            levelReferencer.gameOverWin = true;
         }
     }
 
     //When function is called...
     public void CheckItem()
     {
+        /*
         // ...check list until the end of it...
         for (int i = 0; i < obj.Length; i++)
         {
@@ -124,6 +165,7 @@ public class Overlord : MonoBehaviour
 
                 // ...then, empty the list element to prevent respawns.
                 SpawnerRef.collectiblesList[b] = null;
+                SpawnerRef.collectiblesList.RemoveAt(b);
             }
 
             else
@@ -131,6 +173,18 @@ public class Overlord : MonoBehaviour
                 b = i;
             }
         }
+
+    */
+        foreach(GameObject collectible in obj)
+        {
+            print("2");
+            if (playerRef.itemName == collectible.name)
+            {
+                print("3");
+                collectible.gameObject.SetActive(true);
+            }
+        }
+
     }
 
     #region Hotkey Functionality
@@ -148,16 +202,6 @@ public class Overlord : MonoBehaviour
         Application.Quit();
     }
     #endregion
-
-    private void Awake()
-    {
-        if (refrence == null)
-        {
-            refrence = this.gameObject;
-            DontDestroyOnLoad(this.gameObject);
-        }
-
-    }
 }
 
 
