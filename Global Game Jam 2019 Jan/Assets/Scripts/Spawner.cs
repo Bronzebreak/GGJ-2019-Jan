@@ -25,7 +25,7 @@ public class Spawner : MonoBehaviour
         {
             Spawn();
             print("spawn");   
-            
+            gameObject.SetActive(false);
         }
     }
 
