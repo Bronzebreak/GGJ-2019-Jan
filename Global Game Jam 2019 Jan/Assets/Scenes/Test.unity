@@ -3445,7 +3445,8 @@ Prefab:
         type: 2}
       propertyPath: collectiblesList.Array.data[18]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1447944679037940, guid: 8bafc42e90f520b40a773ca8ab0f70e3,
+        type: 2}
     - target: {fileID: 114969210396474708, guid: 8fb68d26b0bc08f42bfd96db502319ed,
         type: 2}
       propertyPath: collectiblesList.Array.data[19]
@@ -5580,6 +5581,7 @@ MonoBehaviour:
   moveRight: 100
   moveLeft: 97
   horizontalAxis: Horizontal1
+  canJump: 0
   safeZone: 0
   jumpEffect: {fileID: 1554051948}
   collectEffect: {fileID: 1554051947}
@@ -7909,48 +7911,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2035055820}
   m_CullTransparentMesh: 0
---- !u!1001 &2038183053
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4852528307729548, guid: 8bafc42e90f520b40a773ca8ab0f70e3, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -74.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852528307729548, guid: 8bafc42e90f520b40a773ca8ab0f70e3, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 192.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852528307729548, guid: 8bafc42e90f520b40a773ca8ab0f70e3, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852528307729548, guid: 8bafc42e90f520b40a773ca8ab0f70e3, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852528307729548, guid: 8bafc42e90f520b40a773ca8ab0f70e3, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852528307729548, guid: 8bafc42e90f520b40a773ca8ab0f70e3, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852528307729548, guid: 8bafc42e90f520b40a773ca8ab0f70e3, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852528307729548, guid: 8bafc42e90f520b40a773ca8ab0f70e3, type: 2}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8bafc42e90f520b40a773ca8ab0f70e3, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &2057871430
 GameObject:
   m_ObjectHideFlags: 0
