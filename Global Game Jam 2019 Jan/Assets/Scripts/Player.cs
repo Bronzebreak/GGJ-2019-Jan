@@ -14,13 +14,13 @@ public class Player : MonoBehaviour
     public int collectiblesCollected;
     public GameObject itemToRemove;
 
-    //Action Variables
+    //Action Variabless
     public KeyCode moveRight;
     public KeyCode moveLeft;
     public string horizontalAxis;
 
     //Action Restrictions
-    private bool canJump;
+    public bool canJump;
     public bool safeZone = false;
 
     //Sound
