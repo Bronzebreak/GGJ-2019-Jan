@@ -101,47 +101,54 @@ public class Player : MonoBehaviour
         // ...if it is a collectible...
         if (collision.tag == "Collectible")
         {
-            //sets variable value equal to object name
+            // ...the name of the object collided is stored in a variable...
             itemName = collision.gameObject.name;
-            print("1");
-            //calls function in overlord
+
+            // ...and then a function in Overlord is run...
             overlordReference.CheckItem();
-            print("4");
-            //print(itemName);
-            foreach (GameObject arrayObject in spawnerReference.collectiblesList)
+
+            // ...then, for every listed item...
+            foreach (GameObject listedObject in spawnerReference.collectiblesList)
             {
-                print("5");
-                if (itemName.Contains(arrayObject.name))
+                // ...compare name of collided item with name in list, and if there's a match...
+                if (itemName.Contains(listedObject.name))
                 {
-                    print("6");
-                    itemToRemove = arrayObject;
-                    print("7");
+                    // ...store that item in a variable.
+                    itemToRemove = listedObject;
                 }
             }
+            // ...then, remove variable item from list...
             spawnerReference.collectiblesList.Remove(itemToRemove);
-            print("8");
+
+            // ...increase score...
             overlordReference.score += 10;
-            print("9");
+
+            // ...destroy the collided object...
             Destroy(collision.gameObject);
-            print("10");
+
+            // ...increase the quantity of collectibles obtained...
             collectiblesCollected++;
-            print("11");
-            //play collect sound
+
+            //... and play the collect sound.
             collectEffect.Play();
         }
     }
 
+    //When you leave a trigger...
     private void OnTriggerExit2D(Collider2D collision)
     {
+        // ...if it's home...
         if (collision.gameObject.name.ToLower().Contains("home"))
         {
+            // ...the player is no longer in a safe zone.
             safeZone = false;
-            print("SafeZone");
         }
+
+        // ...if it's the blocking volume...
         if (collision.tag == "Block")
         {
+            // ...the block can no longer be triggered.
             collision.isTrigger = false;
-            print("block");
         }
     }
 }
