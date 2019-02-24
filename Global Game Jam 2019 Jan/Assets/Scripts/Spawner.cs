@@ -25,7 +25,7 @@ public class Spawner : MonoBehaviour
             GameObject Item;
 
             // ...create an item from the spawnedItems Array at spawner's location, with spawner's quaternion...
-            Item = Instantiate(collectiblesList[Random.Range(0, 19)], transform.position, Quaternion.identity);
+            Item = Instantiate(collectiblesList[Random.Range(0, collectiblesList.Count)], transform.position, Quaternion.identity);
             Item.gameObject.SetActive(true);
 
             // ...and run the function again after the publicly set spawnDelay.

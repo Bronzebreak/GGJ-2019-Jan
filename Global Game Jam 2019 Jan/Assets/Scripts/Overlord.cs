@@ -7,8 +7,10 @@ using UnityEngine.UI;
 public class Overlord : MonoBehaviour
 {
     #region Variables
+    #region Irrelevant
     //Collectibles
     //playerRef.collectiblesCollected (int);
+    #endregion
     public Text winCollectibles;
     public Text loseCollectibles;
 
@@ -45,11 +47,13 @@ public class Overlord : MonoBehaviour
     public GameObject itemsRefTest;
     #endregion
 
+    #region Irrelevant
     //Index for spawn list
-    int b = 0;
+    //int b = 0;
 
     //List length
-    int listLength;
+    //int listLength;
+    #endregion
 
     //Array with game objects 
     public GameObject[] obj;
@@ -132,14 +136,19 @@ public class Overlord : MonoBehaviour
         else freezeScore = false;
         #endregion
 
+        #region Irrelevant
         //sets variable to list length
-        listLength = SpawnerRef.collectiblesList.Count;
+        //listLength = SpawnerRef.collectiblesList.Count;
+
 
         //If index goes out of range sets it to 0
+        /*
         if (b >= (listLength - 1))
         {
             b = 0;
         }
+        */
+        #endregion 
 
         if (playerRef.collectiblesCollected >= 20)
         {
@@ -150,6 +159,7 @@ public class Overlord : MonoBehaviour
     //When function is called...
     public void CheckItem()
     {
+        #region
         /*
         // ...check list until the end of it...
         for (int i = 0; i < obj.Length; i++)
@@ -175,16 +185,17 @@ public class Overlord : MonoBehaviour
         }
 
     */
-        foreach(GameObject collectible in obj)
+        #endregion
+        // ...for each collectible in the array...
+        foreach (GameObject collectible in obj)
         {
-            print("2");
+            // ...if the name of the collided item matches a collectible name...
             if (playerRef.itemName == collectible.name)
             {
-                print("3");
+                // ...set that item to active (visible).
                 collectible.gameObject.SetActive(true);
             }
         }
-
     }
 
     #region Hotkey Functionality
