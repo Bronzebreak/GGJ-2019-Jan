@@ -17,7 +17,7 @@ public class Player_movement_Animation : MonoBehaviour
 
 
     // Sees if the player if jumping, if true will play the jumping animation.
-    public void jump_cheak()
+   public void jump_cheak()
     {
         if (canJump == true)
         {
@@ -29,7 +29,7 @@ public class Player_movement_Animation : MonoBehaviour
         }
     }
 
-
+    
     // Sees if the player if running, if true will play the running animation.
     public void run_cheak()
     {

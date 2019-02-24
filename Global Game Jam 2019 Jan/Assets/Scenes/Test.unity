@@ -5863,6 +5863,8 @@ MonoBehaviour:
   jumpEffect: {fileID: 1554051948}
   collectEffect: {fileID: 1554051947}
   bGM: {fileID: 1554051946}
+  refrence: {fileID: 0}
+  ani: {fileID: 0}
 --- !u!212 &1554051953
 SpriteRenderer:
   m_ObjectHideFlags: 0

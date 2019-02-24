@@ -27,6 +27,15 @@ public class Player : MonoBehaviour
     public AudioSource jumpEffect;
     public AudioSource collectEffect;
     public AudioSource bGM;
+
+
+    //ref to ani
+    public Player_movement_Animation  refrence;
+
+    public Animator ani;
+
+
+
     #endregion
 
     void Start()
@@ -47,12 +56,18 @@ public class Player : MonoBehaviour
                 //...the character applies a force impulse to the vertical axis...
                 rigBody.AddForce(new Vector2(0, 75f), ForceMode2D.Impulse);
 
+               // ani.SetBool("Bool_isJumping", true);
+
                 //... and the player can no longer jump.
                 canJump = false;
 
                 //play sound
                 jumpEffect.Play();
+
+              
             }
+
+           // ani.SetBool("Bool_isJumping", false);
         }
         #endregion
     }
@@ -65,6 +80,7 @@ public class Player : MonoBehaviour
         {
             // ...retrieve the horizontal input axis value.
             float moveHori = Input.GetAxis(horizontalAxis);
+            //ani.SetBool("Bool_isRunning", true);
 
             // ...then, move horizontally based on the horizontal input; do NOT affect vertical movement.
             rigBody.velocity = new Vector2(moveHori * 3.75f, rigBody.velocity.y);
@@ -87,6 +103,7 @@ public class Player : MonoBehaviour
             canJump = true;
         }
     }
+
 
     //Once you collide with a trigger...
     private void OnTriggerEnter2D(Collider2D collision)
