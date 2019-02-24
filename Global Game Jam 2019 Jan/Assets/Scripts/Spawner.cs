@@ -23,20 +23,12 @@ public class Spawner : MonoBehaviour
     {
         if (col.tag == "Player")
         {
-            if(pTouched == 0)
-            {
-                Spawn();
-                print("spawn");   
-            }
+            Spawn();
+            print("spawn");   
+            
         }
     }
-        void OnTriggerexit2D(Collider2D col)
-    {
-        if(pTouched == 1)
-        {
-            pTouched=1;
-        }
-    }
+
     //When function is called...
     void Spawn()
     {
