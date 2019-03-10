@@ -7389,10 +7389,12 @@ MonoBehaviour:
   loseScore: {fileID: 1050367237}
   timeMinutes: 0
   timeSeconds: 0
-  timeText: {fileID: 2035055822}
-  winTimeText: {fileID: 1175836334}
-  loseTimeText: {fileID: 2035055822}
-  finalScoreText: {fileID: 0}
+  timeTaken: 
+  winTime: {fileID: 1175836334}
+  loseTime: {fileID: 2035055822}
+  finalScore: 
+  winFinalScore: {fileID: 1075872362}
+  loseFinalScore: {fileID: 706297198}
   playerRef: {fileID: 1554051952}
   SpawnerRef: {fileID: 1595709851}
   levelReferencer: {fileID: 1819694249}
