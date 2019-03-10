@@ -24,11 +24,16 @@ public class Overlord : MonoBehaviour
     //Time
     public float timeMinutes;
     public float timeSeconds;
-    public Text timeText;
-    public Text winTimeText;
-    public Text loseTimeText;
+    public string timeTaken;
+    public Text winTime;
+    public Text loseTime;
 
-    public Text finalScoreText;
+
+    //Final Score
+    public float finalScore;
+    public Text winFinalScore;
+    public Text loseFinalScore;
+
 
     //References
     public Player playerRef;
@@ -83,17 +88,24 @@ public class Overlord : MonoBehaviour
             }
 
             // ...then, update the time text.
-            timeText.text = "Time Taken \n" + ((int)timeMinutes).ToString() + "m " + ((int)timeSeconds).ToString() + "s";
+            timeTaken = ((int)timeMinutes).ToString() + "m " + ((int)timeSeconds).ToString() + "s";
+
+            winTime.text = timeTaken;
+            loseTime.text = timeTaken;
         }
 
-        // ...as long as the player isn't in a safe zone...
+        // ...as long as the player isn't in a safe zone or stopped...
         if (playerRef.safeZone == false && freezeScore == false)
         {
             // ...increase score in accordance with the difference in time between frames...
             score += Time.deltaTime;
 
             // ...and then update the score text.
-            displayScore.text = "Score: " + ((int)(score * (100))).ToString();
+            displayScore.text =((int)(score * (100))).ToString();
+            loseScore.text = displayScore.text;
+            winScore.text = displayScore.text;
+
+            finalScore = score - (60 * timeMinutes) - (timeSeconds);
         }
 
         #region Hotkeys
