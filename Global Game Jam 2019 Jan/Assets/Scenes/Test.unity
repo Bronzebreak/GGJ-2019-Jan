@@ -565,7 +565,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1510451643856226, guid: c9aaff622999c274885a62e243509aa1,
     type: 2}
   m_PrefabInternal: {fileID: 1073343826}
---- !u!61 &181686767
+--- !u!61 &181686768
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -574,7 +574,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -3, y: 2}
