@@ -105,9 +105,9 @@ public class Overlord : MonoBehaviour
             loseScore.text = displayScore.text;
             winScore.text = displayScore.text;
 
-            finalScore = "Final Score\n" + (score - (60 * timeMinutes) - (timeSeconds));
-            winFinalScore.text = finalScore.ToString();
-            loseFinalScore.text = finalScore.ToString();
+            finalScore = ((int)((score * (100)) - 30*((60 * timeMinutes) + (timeSeconds)))).ToString();
+            winFinalScore.text = "Final Score\n" + finalScore;
+            loseFinalScore.text = "Final Score\n" + finalScore;
         }
 
         #region Hotkeys
