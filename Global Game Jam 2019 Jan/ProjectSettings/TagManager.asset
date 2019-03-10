@@ -9,6 +9,7 @@ TagManager:
   - collect
   - Block
   - SpawnTrigger
+  - No Jump Zone
   layers:
   - Default
   - TransparentFX

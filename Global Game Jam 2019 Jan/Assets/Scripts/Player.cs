@@ -110,7 +110,7 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // ...if it has 'home' in its name...
-        if (collision.gameObject.name.Contains("Home"))
+        if (collision.tag == "House")
         {
             // ...player is in a safe zone...
             safeZone = true;
@@ -161,7 +161,7 @@ public class Player : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         // ...if it's home...
-        if (collision.gameObject.name.Contains("Home"))
+        if (collision.tag == "House")
         {
             // ...the player is no longer in a safe zone.
             safeZone = false;

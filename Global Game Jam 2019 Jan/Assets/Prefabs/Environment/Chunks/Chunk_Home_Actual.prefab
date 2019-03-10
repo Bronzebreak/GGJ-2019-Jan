@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4930107158152856}
   m_Layer: 0
   m_Name: Chunk_Home_Actual
-  m_TagString: Untagged
+  m_TagString: House
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
