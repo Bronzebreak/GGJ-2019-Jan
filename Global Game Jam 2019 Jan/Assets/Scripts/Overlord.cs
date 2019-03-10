@@ -30,7 +30,7 @@ public class Overlord : MonoBehaviour
 
 
     //Final Score
-    public float finalScore;
+    public string finalScore;
     public Text winFinalScore;
     public Text loseFinalScore;
 
@@ -88,7 +88,7 @@ public class Overlord : MonoBehaviour
             }
 
             // ...then, update the time text.
-            timeTaken = ((int)timeMinutes).ToString() + "m " + ((int)timeSeconds).ToString() + "s";
+            timeTaken = "Time Taken\n" + ((int)timeMinutes).ToString() + "m " + ((int)timeSeconds).ToString() + "s";
 
             winTime.text = timeTaken;
             loseTime.text = timeTaken;
@@ -101,11 +101,13 @@ public class Overlord : MonoBehaviour
             score += Time.deltaTime;
 
             // ...and then update the score text.
-            displayScore.text =((int)(score * (100))).ToString();
+            displayScore.text = "Score\n" + ((int)(score * (100))).ToString();
             loseScore.text = displayScore.text;
             winScore.text = displayScore.text;
 
-            finalScore = score - (60 * timeMinutes) - (timeSeconds);
+            finalScore = "Final Score\n" + (score - (60 * timeMinutes) - (timeSeconds));
+            winFinalScore.text = finalScore.ToString();
+            loseFinalScore.text = finalScore.ToString();
         }
 
         #region Hotkeys
