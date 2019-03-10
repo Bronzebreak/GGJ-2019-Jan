@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
                 //...the character applies a force impulse to the vertical axis...
                 rigBody.AddForce(new Vector2(0, 75f), ForceMode2D.Impulse);
 
-               // ani.SetBool("Bool_isJumping", true);
+               ani.SetBool("Bool_isJumping", true);
 
                 //... and the player can no longer jump.
                 canJump = false;
@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
               
             }
 
-           // ani.SetBool("Bool_isJumping", false);
+           ani.SetBool("Bool_isJumping", false);
         }
         #endregion
     }
@@ -80,7 +80,7 @@ public class Player : MonoBehaviour
         {
             // ...retrieve the horizontal input axis value.
             float moveHori = Input.GetAxis(horizontalAxis);
-            //ani.SetBool("Bool_isRunning", true);
+            ani.SetBool("Bool_isRunning", true);
 
             // ...then, move horizontally based on the horizontal input; do NOT affect vertical movement.
             rigBody.velocity = new Vector2(moveHori * 3.75f, rigBody.velocity.y);

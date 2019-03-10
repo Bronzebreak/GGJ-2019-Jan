@@ -5474,6 +5474,7 @@ GameObject:
   - component: {fileID: 1554051948}
   - component: {fileID: 1554051947}
   - component: {fileID: 1554051946}
+  - component: {fileID: 1554051954}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5789,9 +5790,9 @@ CapsuleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -3.5}
   m_Size: {x: 4.1799994, y: 10.799999}
   m_Direction: 0
 --- !u!61 &1554051950
@@ -5864,7 +5865,7 @@ MonoBehaviour:
   collectEffect: {fileID: 1554051947}
   bGM: {fileID: 1554051946}
   refrence: {fileID: 0}
-  ani: {fileID: 0}
+  ani: {fileID: 1554051954}
 --- !u!212 &1554051953
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5908,9 +5909,27 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1554051954
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1554051944}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7829842fb2edaf3449982b9289329569, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1555536156
 GameObject:
   m_ObjectHideFlags: 0
