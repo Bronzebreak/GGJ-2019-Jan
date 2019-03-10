@@ -2537,7 +2537,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1510451643856226, guid: c9aaff622999c274885a62e243509aa1, type: 2}
       propertyPath: m_TagString
-      value: No Jump Zone
+      value: House
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9aaff622999c274885a62e243509aa1, type: 2}

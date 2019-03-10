@@ -26,6 +26,7 @@ public class Tile_Spawner : MonoBehaviour
         {
             // ...begin Spawn function...
             Spawn();
+            print("tiles");
 
             // ...and disallow further spawn calls.
             canSpawn = false;

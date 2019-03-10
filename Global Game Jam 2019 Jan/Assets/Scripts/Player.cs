@@ -13,39 +13,27 @@ public class Player : MonoBehaviour
     public string itemName;
     public int collectiblesCollected;
     public GameObject itemToRemove;
-
     //Action Variabless
     public KeyCode moveRight;
     public KeyCode moveLeft;
     public string horizontalAxis;
-
     //Action Restrictions
     public bool canJump;
     public bool safeZone = false;
     public bool noJumpZone = false;
-
-
     //Sound
     public AudioSource jumpEffect;
     public AudioSource collectEffect;
     public AudioSource bGM;
-
-
     //ref to ani
     public Player_movement_Animation  refrence;
-
     public Animator ani;
-
-
-
     #endregion
-
     void Start()
     {
         //Retrieves the rigidbody component attached to this game object.
         rigBody = GetComponent<Rigidbody2D>();
     }
-
     private void Update()
     {
         #region Jump
@@ -64,15 +52,12 @@ public class Player : MonoBehaviour
                 canJump = false;
 
                 //play sound
-                jumpEffect.Play();
-              
+                jumpEffect.Play();       
             }
-
            ani.SetBool("Bool_isJumping", false);
         }
         #endregion
     }
-
     //Multiple times a frame...
     void FixedUpdate()
     {
@@ -82,18 +67,15 @@ public class Player : MonoBehaviour
             // ...retrieve the horizontal input axis value.
             float moveHori = Input.GetAxis(horizontalAxis);
             ani.SetBool("Bool_isRunning", true);
-
             // ...then, move horizontally based on the horizontal input; do NOT affect vertical movement.
             rigBody.velocity = new Vector2(moveHori * 3.75f, rigBody.velocity.y);
         }
-
         else
         {
             rigBody.velocity = new Vector2(5, rigBody.velocity.y);
         }
         #endregion
     }
-
     //Upon staying overlapped with an object...
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -104,8 +86,6 @@ public class Player : MonoBehaviour
             canJump = true;
         }
     }
-
-
     //Once you collide with a trigger...
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -120,16 +100,13 @@ public class Player : MonoBehaviour
             // ...player is in a safe zone...
             noJumpZone = true;
         }
-
         // ...if it is a collectible...
         if (collision.tag == "Collectible")
         {
             // ...the name of the object collided is stored in a variable...
             itemName = collision.gameObject.name;
-
             // ...and then a function in Overlord is run...
             overlordReference.CheckItem();
-
             // ...then, for every listed item...
             foreach (GameObject listedObject in spawnerReference.collectiblesList)
             {
@@ -142,21 +119,16 @@ public class Player : MonoBehaviour
             }
             // ...then, remove variable item from list...
             spawnerReference.collectiblesList.Remove(itemToRemove);
-
             // ...increase score...
             overlordReference.score += 10;
-
             // ...destroy the collided object...
             Destroy(collision.gameObject);
-
             // ...increase the quantity of collectibles obtained...
             collectiblesCollected++;
-
             //... and play the collect sound.
             collectEffect.Play();
         }
     }
-
     //When you leave a trigger...
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -172,7 +144,6 @@ public class Player : MonoBehaviour
             noJumpZone = false;
             print("exit safe zone");
         }
-
         // ...if it's the blocking volume...
         if (collision.tag == "Block")
         {
@@ -181,4 +152,3 @@ public class Player : MonoBehaviour
         }
     }
 }
-
