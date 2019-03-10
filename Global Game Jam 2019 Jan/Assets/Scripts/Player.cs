@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
     //Action Restrictions
     public bool canJump;
     public bool safeZone = false;
+    public bool noJumpZone = false;
+
 
     //Sound
     public AudioSource jumpEffect;
@@ -48,7 +50,7 @@ public class Player : MonoBehaviour
     {
         #region Jump
         //If player is allowed to jump...
-        if (canJump == true && !safeZone)
+        if (canJump == true && !noJumpZone)
         {
             // ...if player presses space... 
             if (Input.GetKeyDown(KeyCode.Space))
@@ -63,7 +65,6 @@ public class Player : MonoBehaviour
 
                 //play sound
                 jumpEffect.Play();
-
               
             }
 
@@ -109,10 +110,15 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // ...if it has 'home' in its name...
-        if (collision.gameObject.name.ToLower().Contains("home"))
+        if (collision.gameObject.name.Contains("Home"))
         {
             // ...player is in a safe zone...
             safeZone = true;
+        }
+        if (collision.gameObject.name.Contains("Chunk_Home_Actual"))
+        {
+            // ...player is in a safe zone...
+            noJumpZone = true;
         }
 
         // ...if it is a collectible...
@@ -155,10 +161,16 @@ public class Player : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         // ...if it's home...
-        if (collision.gameObject.name.ToLower().Contains("home"))
+        if (collision.gameObject.name.Contains("Home"))
         {
             // ...the player is no longer in a safe zone.
             safeZone = false;
+        }
+        if (collision.gameObject.name.Contains("Chunk_Home_Actual"))
+        {
+            // ...player is in a safe zone...
+            noJumpZone = false;
+            print("exit safe zone");
         }
 
         // ...if it's the blocking volume...
