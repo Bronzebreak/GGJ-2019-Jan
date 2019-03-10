@@ -28,7 +28,6 @@ public class Overlord : MonoBehaviour
     public Text winTime;
     public Text loseTime;
 
-
     //Final Score
     public string finalScore;
     public Text winFinalScore;
@@ -87,9 +86,8 @@ public class Overlord : MonoBehaviour
                 timeSeconds = 0;
             }
 
-            // ...then, update the time text.
+            // ...then, update the time texts.
             timeTaken = "Time Taken\n" + ((int)timeMinutes).ToString() + "m " + ((int)timeSeconds).ToString() + "s";
-
             winTime.text = timeTaken;
             loseTime.text = timeTaken;
         }
@@ -100,15 +98,22 @@ public class Overlord : MonoBehaviour
             // ...increase score in accordance with the difference in time between frames...
             score += Time.deltaTime;
 
-            // ...and then update the score text.
+            // ...and then update the score texts.
             displayScore.text = "Score\n" + ((int)(score * (100))).ToString();
             loseScore.text = displayScore.text;
             winScore.text = displayScore.text;
-
-            finalScore = ((int)((score * (100)) - 30*((60 * timeMinutes) + (timeSeconds)))).ToString();
-            winFinalScore.text = "Final Score\n" + finalScore;
-            loseFinalScore.text = "Final Score\n" + finalScore;
         }
+        
+        // ...tally final score based off of score and time taken...
+        finalScore = ((int)((score * (100)) - 30 * ((60 * timeMinutes) + (timeSeconds)))).ToString();
+
+        // ...and then update final score texts...
+        winFinalScore.text = "Final Score\n" + finalScore;
+        loseFinalScore.text = "Final Score\n" + finalScore;
+
+        // ...and then set the collectibles text dependent on items collected.
+        winCollectibles.text = "You collected all of the items, and made it home!";
+        loseCollectibles.text = "You collected " + playerRef.collectiblesCollected + "items and didn't make it home...";
 
         #region Hotkeys
         // ...if Esc is pressed...
@@ -164,8 +169,10 @@ public class Overlord : MonoBehaviour
         */
         #endregion 
 
+        // ...if player has collected all items...
         if (playerRef.collectiblesCollected >= 20)
         {
+            // ...the game is over.
             levelReferencer.gameOverWin = true;
         }
     }
