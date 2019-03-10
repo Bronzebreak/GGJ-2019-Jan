@@ -46,7 +46,7 @@ public class Trigger_Spawner : MonoBehaviour
 	 void Spawn()
     {
         newPosition.x += 22.5f;
-        newPosition.y = -4.517f;
+        newPosition.y = -3.517f;
         // ...if the player is not in the house...
         if (playerRef.safeZone == false)
         {
