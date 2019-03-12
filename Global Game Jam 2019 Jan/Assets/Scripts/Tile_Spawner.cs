@@ -27,7 +27,8 @@ public class Tile_Spawner : MonoBehaviour
             // ...begin Spawn function...
             Spawn();
             print("tiles");
-
+            //
+         
             // ...and disallow further spawn calls.
             canSpawn = false;
         }
@@ -49,16 +50,17 @@ public class Tile_Spawner : MonoBehaviour
         // ...if the player is not in the house...
         if (playerRef.safeZone == false)
         {
+            
             // ...create an item from the spawnedItems Array at spawner's location, with spawner's quaternion...
             //Instantiate(spawnedItems[Random.Range(0, spawnedItems.GetLength(0))], newPosition, Quaternion.identity);
-
+            
             // ...and run the function again after the publicly set spawnDelay.
             //Invoke("Spawn", spawnDelay);
             for (int i = 0; i <50; i++) 
             {
-                
                 Instantiate(spawnedItems[Random.Range(0, spawnedItems.GetLength(0))], newPosition, Quaternion.identity);
                 newPosition.x +=9.0f;
+                
                 //transform.position = newPosition;
                 //print(newPosition);
             }

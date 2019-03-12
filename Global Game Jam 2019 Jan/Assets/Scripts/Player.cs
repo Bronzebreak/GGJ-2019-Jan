@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     #region Variables
     //Externally Referenced Variables
+    public Collider2D colBlock;
     private Rigidbody2D rigBody;
     public Overlord overlordReference;
     public Spawner spawnerReference;
@@ -36,6 +37,11 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
+
+        if(colBlock.isTrigger ==true)
+        {
+            print("is trigger");
+        }
         #region Jump
         //If player is allowed to jump...
         if (canJump == true && !noJumpZone)
@@ -62,7 +68,7 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         #region Movement
-        if (safeZone)
+        if (noJumpZone)
         {
             // ...retrieve the horizontal input axis value.
             float moveHori = Input.GetAxis(horizontalAxis);
@@ -137,18 +143,23 @@ public class Player : MonoBehaviour
         {
             // ...the player is no longer in a safe zone.
             safeZone = false;
+            colBlock.isTrigger =true;
         }
         if (collision.gameObject.name.Contains("Chunk_Home_Actual"))
         {
+            
             // ...player is in a safe zone...
             noJumpZone = false;
             print("exit safe zone");
-        }
+            colBlock.isTrigger =true;
+        }   
         // ...if it's the blocking volume...
         if (collision.tag == "Block")
         {
             // ...the block can no longer be triggered.
             collision.isTrigger = false;
+            
+            
         }
     }
 }
