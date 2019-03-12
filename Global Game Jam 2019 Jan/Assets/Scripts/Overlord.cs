@@ -36,7 +36,7 @@ public class Overlord : MonoBehaviour
 
     //References
     public Player playerRef;
-
+    public Spawner SpawnerRef;
     public LoadLevel levelReferencer;
 
     //Move Detection
