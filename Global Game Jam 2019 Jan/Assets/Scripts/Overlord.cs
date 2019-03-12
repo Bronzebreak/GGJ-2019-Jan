@@ -36,7 +36,7 @@ public class Overlord : MonoBehaviour
 
     //References
     public Player playerRef;
-    public Spawner SpawnerRef;
+
     public LoadLevel levelReferencer;
 
     //Move Detection
@@ -52,7 +52,7 @@ public class Overlord : MonoBehaviour
     #endregion
 
     #region Irrelevant
-    //Index for spawn list
+    public List<GameObject> collectiblesList;
     //int b = 0;
 
     //List length

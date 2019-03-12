@@ -6,8 +6,9 @@ public class Spawner : MonoBehaviour
 {
     public GameObject itemRef;
     int pTouched;
+    public Overlord overlordRef;
     //public Player playerRef;
-    public List<GameObject> collectiblesList;
+    
     Vector3 newPosition;
     //Upon initialization...
     private void Start()
@@ -37,7 +38,7 @@ public class Spawner : MonoBehaviour
             newPosition.x +=25.0f;
             newPosition.y = 0;
             // ...create an item from the spawnedItems Array at spawner's location, with spawner's quaternion...
-            Item = Instantiate(collectiblesList[Random.Range(0, collectiblesList.Count)], newPosition, Quaternion.identity);
+            Item = Instantiate(overlordRef.collectiblesList[Random.Range(0, overlordRef.collectiblesList.Count)], newPosition, Quaternion.identity);
             Item.gameObject.SetActive(true);
             newPosition = itemRef.transform.position;
     }
