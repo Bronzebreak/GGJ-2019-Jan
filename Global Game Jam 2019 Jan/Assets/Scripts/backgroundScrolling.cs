@@ -8,6 +8,8 @@ public class backgroundScrolling : MonoBehaviour
     Vector2 bgOffSet;
 
     public float xVel, yVel;
+    public bool isScrolling = false;
+    public Player player;
 
     // Use this for initialization
 
@@ -25,7 +27,31 @@ public class backgroundScrolling : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        bgOffSet = new Vector2(xVel, yVel);
-        mat.mainTextureOffset += bgOffSet * Time.deltaTime;
-	}
+        /*
+        if (GetComponent<Player>().safeZone == true)
+        {
+            isScrolling = true;
+        }
+
+        else if(GetComponent<Player>().safeZone == false)
+        {
+            isScrolling = false;
+        }
+
+
+
+        if (isScrolling == true)
+        {
+        */
+            bgOffSet = new Vector2(xVel, yVel);
+            mat.mainTextureOffset += bgOffSet * Time.deltaTime;
+        /*
+        }
+
+        else if (isScrolling == false)
+        {
+            print("NOT MOVEING");
+        }
+        */
+    }
 }

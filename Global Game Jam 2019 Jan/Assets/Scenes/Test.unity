@@ -3690,6 +3690,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xVel: 0.05
   yVel: 0
+  isScrolling: 0
+  player: {fileID: 1554051952}
 --- !u!23 &1330784886
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3739,7 +3741,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1330784883}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.720001, y: 0.8999939, z: 21.9}
+  m_LocalPosition: {x: 14.720001, y: -0.1, z: 21.9}
   m_LocalScale: {x: 65.92219, y: 10.170922, z: 1}
   m_Children: []
   m_Father: {fileID: 984978036}
@@ -4746,7 +4748,6 @@ MonoBehaviour:
   jumpEffect: {fileID: 1554051948}
   collectEffect: {fileID: 1554051947}
   bGM: {fileID: 1554051946}
-  refrence: {fileID: 0}
   ani: {fileID: 1554051954}
 --- !u!212 &1554051953
 SpriteRenderer:

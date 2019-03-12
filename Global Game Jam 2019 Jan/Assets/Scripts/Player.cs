@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     public AudioSource collectEffect;
     public AudioSource bGM;
     //ref to ani
-    public Player_movement_Animation  refrence;
+
     public Animator ani;
     #endregion
     void Start()
