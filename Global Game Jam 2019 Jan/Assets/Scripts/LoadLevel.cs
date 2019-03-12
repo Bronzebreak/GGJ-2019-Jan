@@ -15,6 +15,7 @@ public class LoadLevel : MonoBehaviour
     public bool isOperator = false;
     public bool gameOverLose = false;
     public bool gameOverWin = false;
+    private bool gameEnded = false;
 
     public GameObject[] canvases = new GameObject[5];
 
@@ -46,8 +47,9 @@ public class LoadLevel : MonoBehaviour
             RestartGame();
         }
 
-        if (gameOverLose)
+        if (gameOverLose && !gameEnded)
         {
+            gameEnded = true;
             canvases[0].SetActive(false);
             canvases[1].SetActive(false);
             canvases[2].SetActive(false);
@@ -55,8 +57,9 @@ public class LoadLevel : MonoBehaviour
             canvases[4].SetActive(false);
         }
 
-        if (gameOverWin)
+        if (gameOverWin && !gameEnded)
         {
+            gameEnded = true;
             canvases[0].SetActive(false);
             canvases[1].SetActive(false);
             canvases[2].SetActive(true);
@@ -92,6 +95,7 @@ public class LoadLevel : MonoBehaviour
             canvases[2].SetActive(false);
             canvases[3].SetActive(false);
             canvases[4].SetActive(true);
+            print("wah");
         }
     }
 
