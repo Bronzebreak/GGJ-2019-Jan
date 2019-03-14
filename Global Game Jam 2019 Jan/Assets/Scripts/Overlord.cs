@@ -146,7 +146,7 @@ public class Overlord : MonoBehaviour
             levelReferencer.gameOverWin = true;
         }
     }
-
+    
     //When function is called...
     public void CheckItem()
     {
@@ -167,7 +167,7 @@ public class Overlord : MonoBehaviour
     public void RestartGame()
     {
         // ...load scene of publicly set name 'scene'.
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Test");
     }
 
     //When function is called...

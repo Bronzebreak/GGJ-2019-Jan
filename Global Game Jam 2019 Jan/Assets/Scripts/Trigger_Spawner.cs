@@ -4,25 +4,28 @@ using UnityEngine;
 
 public class Trigger_Spawner : MonoBehaviour 
 {
-	// reference to the trigger prefab
-	public GameObject spawnedItems;
-	// reference to the object that spawns 
-    public GameObject itemsRefTest;
+    #region Variables
+    //Script References
     public Player playerRef;
-    private bool canSpawn;
-    //float xPosition  = 0;
-	Vector3 newPosition;
 
-	// Use this for initialization
+    //Spawn Functionality Variables
+    public GameObject spawnedItems;
+    public GameObject homeChunk;
+    private bool canSpawn;
+	Vector3 targetPosition;
+    #endregion
+
+    //Upon game start...
     void Start()
     {
-        newPosition = itemsRefTest.transform.position;
+        // ...set target to the home chunk's location.
+        targetPosition = homeChunk.transform.position;
     }
 	
-	// Update is called once per frame
+	//Once a frame...
     void FixedUpdate()
     {
-        // ...if the player is NOT in the house and canSpawn is true...
+        // ...if the player is NOT in the house and I'm allowed to spawn...
         if (playerRef.safeZone == false && canSpawn == true)
         {
             // ...begin Spawn function...
@@ -38,21 +41,29 @@ public class Trigger_Spawner : MonoBehaviour
             // ...spawn can be called.
             canSpawn = true;
         }
-        newPosition = itemsRefTest.transform.position;
+
+        // ...then update my location to the home chunk's location.
+        targetPosition = homeChunk.transform.position;
     }
+
+    //When function is called...
 	 void Spawn()
     {
-        newPosition.x += 22.5f;
-        newPosition.y = -3.517f;
-        // ...if the player is not in the house...
+        // ...increase and set new target position...
+        targetPosition.x += 22.5f;
+        targetPosition.y = -3.517f;
+
+        // ...then, if the player is not in the house...
         if (playerRef.safeZone == false)
         {
-            // ...create an item from the spawnedItems Array at spawner's location, with spawner's quaternion...
-            // ...and run the function again after the publicly set spawnDelay.ы
+            // ...and run the instantiation 5 times by...
             for (int i = 0; i <5; i++) 
             {         
-                Instantiate(spawnedItems, newPosition, Quaternion.identity);
-                newPosition.x +=90.0f;
+                // ...creating an item from the spawnedItems array, at the target position with my quaternion identity...
+                Instantiate(spawnedItems, targetPosition, Quaternion.identity);
+
+                // ...and then increasing the target position's location 90 units to the right.
+                targetPosition.x +=90.0f;
             }
         }
     }

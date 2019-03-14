@@ -5,24 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class LoadLevel : MonoBehaviour
 {
-    //Variables
+    #region Variables
+    //Operator Designation
+    public bool isOperator = false;
+    
+    //Canvases
     public string canvasToLoad;
+    public GameObject[] canvases = new GameObject[5];
     public GameObject menu;
     public GameObject game;
     public GameObject endWin;
     public GameObject endLose;
     public GameObject credits;
-    public bool isOperator = false;
+    
+    //Game States
     public bool gameOverLose = false;
     public bool gameOverWin = false;
     private bool gameEnded = false;
-
-    public GameObject[] canvases = new GameObject[5];
+    #endregion
 
     //Upon game start...
     private void Start()
     {
-        // ...set the publicly set canvases...
+        // ...designate the publicly set canvases as values in the array...
         canvases[0] = menu;
         canvases[1] = game;
         canvases[2] = endWin;
@@ -32,7 +37,7 @@ public class LoadLevel : MonoBehaviour
         // ...and if this object is the game manager...
         if (isOperator)
         {
-            // ...it sets the menu screen to true.
+            // ...it sets the menu screen active.
             canvases[0].SetActive(true);
             canvases[1].SetActive(false);
             canvases[2].SetActive(false);

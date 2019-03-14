@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class Tile_Spawner : MonoBehaviour
 {
+    #region Variables
+    //Script References
+    public Player playerRef;
+
+    //Spawn Functionality Variables
     public GameObject[] spawnedItems;
     public GameObject spawnerRef;
-    public GameObject itemsRefTest;
-
-    public Player playerRef;
+    public GameObject homeChunk;
     private bool canSpawn;
-    Vector3 newPosition;
+    Vector3 targetPosition;
+    #endregion
 
+    //Upon game start...
     void Start()
     {
-        newPosition = itemsRefTest.transform.position;
+        // ...target location is the home chunk's position.
+        targetPosition = homeChunk.transform.position;
     }
 
     //Multiple times a frame...
@@ -36,25 +42,30 @@ public class Tile_Spawner : MonoBehaviour
             // ...spawn can be called.
             canSpawn = true;
         }
-        newPosition = itemsRefTest.transform.position;
+
+        // ...then, update target position to home's new position.
+        targetPosition = homeChunk.transform.position;
     }
 
     //When function is called...
     void Spawn()
     {
-        newPosition.x += 22.5f;
-        newPosition.y = -4.517f;
-        // ...if the player is not in the house...
+        // ...update and set target position...
+        targetPosition.x += 22.5f;
+        targetPosition.y = -4.517f;
+
+        // ...then, if the player is not in the house...
         if (playerRef.safeZone == false)
         {
+            // ...50 times...
             for (int i = 0; i <50; i++) 
             {
-                Instantiate(spawnedItems[Random.Range(0, spawnedItems.GetLength(0))], newPosition, Quaternion.identity);
-                newPosition.x +=9.0f;
+                // ...instantiate a random item from the list at target position with my quaternion identity...
+                Instantiate(spawnedItems[Random.Range(0, spawnedItems.GetLength(0))], targetPosition, Quaternion.identity);
 
+                // ...then increase location of next spawn by 9 units.
+                targetPosition.x +=9.0f;
             }
         }
-
-
     }
 }

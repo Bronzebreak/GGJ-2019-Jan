@@ -6,13 +6,8 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     #region Variables
-    //Externally Referenced Variables
-    public Collider2D colBlock;
-    private Rigidbody2D rigBody;
-
     //Script References
     public Overlord overlordReference;
-    public Spawner spawnerReference;
 
     //List Compare Function Variables
     public string itemName;
@@ -23,7 +18,8 @@ public class Player : MonoBehaviour
     public bool canJump;
     public bool safeZone = false;
     public bool noJumpZone = false;
-    
+    private Rigidbody2D rigBody;
+
     //Audio
     public AudioSource jumpEffect;
     public AudioSource collectEffect;
