@@ -9,157 +9,135 @@ public class Player : MonoBehaviour
     //Externally Referenced Variables
     public Collider2D colBlock;
     private Rigidbody2D rigBody;
+
+    //Script References
     public Overlord overlordReference;
     public Spawner spawnerReference;
+
+    //List Compare Function Variables
     public string itemName;
     public GameObject itemToRemove;
-    //Action Variabless
-    public KeyCode moveRight;
-    public KeyCode moveLeft;
+
+    //Action Variables
     public string horizontalAxis;
-    //Action Restrictions
     public bool canJump;
     public bool safeZone = false;
     public bool noJumpZone = false;
-    //Sound
+    
+    //Audio
     public AudioSource jumpEffect;
     public AudioSource collectEffect;
     public AudioSource bGM;
-    //ref to ani
-
-    public Animator ani;
     #endregion
+
+    //Upon game start...
     void Start()
     {
-        //Retrieves the rigidbody component attached to this game object.
+        // ...retrieve my rigidbody component.
         rigBody = GetComponent<Rigidbody2D>();
     }
+
+    //Once a frame...
     private void Update()
     {
-
-        if(colBlock.isTrigger ==true)
+        // ...if I'm allowed to jump...
+        if (canJump == true && !safeZone)
         {
-            print("is trigger");
-        }
-        #region Jump
-        //If player is allowed to jump...
-        if (canJump == true && !noJumpZone)
-        {
-            // ...if player presses space... 
+            // ...if the player presses space... 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                //...the character applies a force impulse to the vertical axis...
+                // ...add a force impulse to my vertical axis...
                 rigBody.AddForce(new Vector2(0, 75f), ForceMode2D.Impulse);
 
-               ani.SetBool("Bool_isJumping", true);
-
-                //... and the player can no longer jump.
+                // ...prevent me from jumping again...
                 canJump = false;
 
-                //play sound
+                // ...and play effect sound.
                 jumpEffect.Play();       
             }
-           ani.SetBool("Bool_isJumping", false);
         }
-        #endregion
-    }
-    //Multiple times a frame...w
-    void FixedUpdate()
-    {
-        #region Movement
-        if (noJumpZone)
+
+        // ...if I'm in a safeZone (i.e. the house)...
+        if (safeZone)
         {
-            // ...retrieve the horizontal input axis value.
+            // ...retrieve the horizontal input axis value...
             float moveHori = Input.GetAxis(horizontalAxis);
-            ani.SetBool("Bool_isRunning", true);
-            // ...then, move horizontally based on the horizontal input; do NOT affect vertical movement.
+
+            // ...then, I move horizontally based on the horizontal input.
             rigBody.velocity = new Vector2(moveHori * 3.75f, rigBody.velocity.y);
         }
+
+        // ...if I'm NOT in a safeZone...
         else
         {
+            // ...I'm constantly moving to the right.
             rigBody.velocity = new Vector2(5, rigBody.velocity.y);
         }
-        #endregion
     }
-    //Upon staying overlapped with an object...
+
+    //If I stay overlapped with an object...
     private void OnTriggerStay2D(Collider2D collision)
     {
-        // ...if object's name contains 'ground'
+        // ...and the object is 'ground'...
         if (collision.gameObject.name.ToLower().Contains("ground"))
         {
-            // ...enable jumping.
+            // ...I can jump.
             canJump = true;
         }
     }
-    //Once you collide with a trigger...
+
+    //When I collide with a trigger...
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // ...if it has 'home' in its name...
-        if (collision.tag == "No Jump Zone")
+        // ...if it is the house...
+        if (collision.tag == "House")
         {
-            // ...player is in a safe zone...
+            // ...I am in a safe zone.
             safeZone = true;
         }
-        if (collision.gameObject.name.Contains("Chunk_Home_Actual"))
-        {
-            // ...player is in a safe zone...
-            noJumpZone = true;
-        }
+
         // ...if it is a collectible...
         if (collision.tag == "Collectible")
         {
-            // ...the name of the object collided is stored in a variable...
+            // ...the name of the object collided with is stored in a variable...
             itemName = collision.gameObject.name;
-
-            collision.gameObject.SetActive(false);
 
             // ...and then a function in Overlord is run...
             overlordReference.CheckItem();
-            // ...then, for every listed item...
+
+            // ...then, for every item that has yet to be collected in the overlord's collectible list...
             foreach (GameObject listedObject in overlordReference.collectiblesList)
             {
-                // ...compare name of collided item with name in list, and if there's a match...
+                // ...if the object collided with is the same...
                 if (itemName.Contains(listedObject.name))
                 {
                     // ...store that item in a variable.
                     itemToRemove = listedObject;
                 }
             }
-            // ...then, remove variable item from list...
+
+            // ...then, remove item from list...
             overlordReference.collectiblesList.Remove(itemToRemove);
-            // ...increase score...
+
+            // ...increase my score...
             overlordReference.score += 10;
-            // ...destroy the collided object...
+
+            // ...destroy the object that I collided with...
             Destroy(collision.gameObject);
-            //... and play the collect sound.
+
+            // ...and play the collect sound effect.
             collectEffect.Play();
         }
     }
-    //When you leave a trigger...
+
+    //When I leave a trigger...
     private void OnTriggerExit2D(Collider2D collision)
     {
-        // ...if it's home...
-        if (collision.tag == "No Jump Zone")
+        // ...if it was the house...
+        if (collision.tag == "House")
         {
-            // ...the player is no longer in a safe zone.
+            // ...I am no longer in a safe zone.
             safeZone = false;
-            colBlock.isTrigger =true;
-        }
-        if (collision.gameObject.name.Contains("Chunk_Home_Actual"))
-        {
-            
-            // ...player is in a safe zone...
-            noJumpZone = false;
-            print("exit safe zone");
-            colBlock.isTrigger =true;
-        }   
-        // ...if it's the blocking volume...
-        if (collision.tag == "Block")
-        {
-            // ...the block can no longer be triggered.
-            collision.isTrigger = false;
-            
-            
         }
     }
 }

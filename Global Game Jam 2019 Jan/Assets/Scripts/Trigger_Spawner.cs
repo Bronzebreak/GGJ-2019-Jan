@@ -14,7 +14,7 @@ public class Trigger_Spawner : MonoBehaviour
 	Vector3 newPosition;
 
 	// Use this for initialization
-    void start()
+    void Start()
     {
         newPosition = itemsRefTest.transform.position;
     }

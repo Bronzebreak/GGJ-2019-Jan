@@ -5,41 +5,36 @@ using UnityEngine.SceneManagement;
 
 public class Destroyer : MonoBehaviour
 {
+    #region Variables
+    //Script References
     public LoadLevel levelReferencer;
-    public string canvasToLoad;
-    public GameObject menu;
-    public GameObject game;
-    public GameObject endWin;
-    public GameObject endLose;
-    public GameObject credits;
 
-    public GameObject itemsRefTest;
-    
-    Vector3 housePosition;
+    //Teleportation Functionality Variables
+    public GameObject houseChunk;
+    Vector3 housePositionMarker = new Vector3 (0, -3.11f);
 
-    //player death audio
+    //Audio
     public AudioSource deathEffect;
-    
-    void Start() 
-    {
+    #endregion
 
-    }
-
-    //If collision with a trigger occurs...
+    //Upon collision...
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "House")
+        // ...if the object is the house chunk...
+        if (other.tag == "House Chunk")
         {
-            housePosition.x += 486;
-            housePosition.y = -3.11f;
-            itemsRefTest.transform.position = housePosition;
+            // ...increase the x position of the house marker by 486...
+            housePositionMarker.x += 486;
+
+            // ...and move the house to the new location.
+            houseChunk.transform.position = housePositionMarker;
         }
         
         // ...if it's the player...
         else if (other.tag == "Player")
         {
+            // ...the game is over and the player loses.
             levelReferencer.gameOverLose = true;
-
         }
         
         // ...if it has a parent...

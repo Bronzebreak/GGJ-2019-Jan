@@ -7,30 +7,25 @@ using UnityEngine.UI;
 public class Overlord : MonoBehaviour
 {
     #region Variables
-    //Collectibles
+    //UI References
     public Text winCollectibles;
     public Text loseCollectibles;
-
-    //Score
-    public float score;
-    public bool freezeScore;
     public Text displayScore;
     public Text winScore;
     public Text loseScore;
-
-    //Time
-    public float timeMinutes;
-    public float timeSeconds;
-    public string timeTaken;
     public Text winTime;
     public Text loseTime;
-
-    //Final Score
-    public string finalScore;
     public Text winFinalScore;
     public Text loseFinalScore;
 
-    //References
+    //Statistic Trackers
+    public float score;
+    public float timeMinutes;
+    public float timeSeconds;
+    public string timeTaken;
+    public string finalScore;
+
+    //Script References
     public Player playerRef;
     public LoadLevel levelReferencer;
 
@@ -40,20 +35,14 @@ public class Overlord : MonoBehaviour
     private int framesStopped = 0;
     private float playerXPrevious;
     private float playerXCurrent;
+    public bool freezeScore;
 
-    //Player reference
-    public GameObject itemsRefTest;
-
+    //Collectible References
     public List<GameObject> collectiblesList;
-   
-
-    //Array with game objects 
     public GameObject[] obj;
 
-    //player death audio
+    //Audio
     public AudioSource deathEffect;
-
-    public static GameObject refrence;
     #endregion
 
     //Once a frame...
@@ -62,7 +51,7 @@ public class Overlord : MonoBehaviour
         // ...if not in the gameOver states...
         if (levelReferencer.gameOverWin == false && levelReferencer.gameOverLose == false)
         {
-            // ...count up the time based off the difference in time between frames.
+            // ...count up the time based off the difference in time between frames...
             timeSeconds += Time.deltaTime;
 
             // ...then, if time is greater than or equal to 60...
@@ -121,37 +110,39 @@ public class Overlord : MonoBehaviour
         #endregion
 
         #region Move Detection
+        //Variables
         playerXPrevious = playerXCurrent;
         playerXCurrent = playerRef.transform.position.x;
 
+        // ...if the player's location between frames is less than or equal to .005 units...
         if (Mathf.Abs(playerXPrevious - playerXCurrent) <= 0.005f)
         {
-            //playerStopped = true;
+            // ...the player has stopped moving for one frame...
             framesStopped += 1;
         }
 
+        // ...if the player's location between frames is greater than .005 units...
         else
         {
-            //playerStopped = false;
+            // ...the player is moving.
             framesStopped = 0;
         }
 
+        // ...if the player has stopped moving for more than two frames, and isn't in the safe zone...
         if (framesStopped >= 2 && playerRef.safeZone == false)
         {
+            // ...the player is stationary, so freeze score.
             freezeScore = true;
         }
 
+        // ...if the player doesn't stop moving, continue counting up score.
         else freezeScore = false;
         #endregion
 
-        #region Irrelevant
-        //sets variable to list length
-        #endregion 
-
-        // ...if player has collected all items...
+        // ...if player has removed all items from the collectibles list via contact with that object in-game (IE, has collected all objects)...
         if (collectiblesList.Count == 0)
         {
-            // ...the game is over.
+            // ...the player has won the game.
             levelReferencer.gameOverWin = true;
         }
     }

@@ -10,9 +10,9 @@ public class Tile_Spawner : MonoBehaviour
 
     public Player playerRef;
     private bool canSpawn;
-    //float xPosition  = 0;
     Vector3 newPosition;
-    void start()
+
+    void Start()
     {
         newPosition = itemsRefTest.transform.position;
     }
@@ -25,8 +25,6 @@ public class Tile_Spawner : MonoBehaviour
         {
             // ...begin Spawn function...
             Spawn();
-            print("tiles");
-            //
          
             // ...and disallow further spawn calls.
             canSpawn = false;
@@ -49,12 +47,6 @@ public class Tile_Spawner : MonoBehaviour
         // ...if the player is not in the house...
         if (playerRef.safeZone == false)
         {
-            
-            // ...create an item from the spawnedItems Array at spawner's location, with spawner's quaternion...
-            
-            
-            // ...and run the function again after the publicly set spawnDelay.
-
             for (int i = 0; i <50; i++) 
             {
                 Instantiate(spawnedItems[Random.Range(0, spawnedItems.GetLength(0))], newPosition, Quaternion.identity);

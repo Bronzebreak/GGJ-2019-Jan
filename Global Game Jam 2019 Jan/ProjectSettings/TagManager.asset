@@ -10,6 +10,7 @@ TagManager:
   - Block
   - SpawnTrigger
   - No Jump Zone
+  - House Chunk
   layers:
   - Default
   - TransparentFX
