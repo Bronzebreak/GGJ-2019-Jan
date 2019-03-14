@@ -7,10 +7,7 @@ using UnityEngine.UI;
 public class Overlord : MonoBehaviour
 {
     #region Variables
-    #region Irrelevant
     //Collectibles
-    //playerRef.collectiblesCollected (int);
-    #endregion
     public Text winCollectibles;
     public Text loseCollectibles;
 
@@ -33,10 +30,8 @@ public class Overlord : MonoBehaviour
     public Text winFinalScore;
     public Text loseFinalScore;
 
-
     //References
     public Player playerRef;
-    public Spawner SpawnerRef;
     public LoadLevel levelReferencer;
 
     //Move Detection
@@ -47,14 +42,10 @@ public class Overlord : MonoBehaviour
     private float playerXCurrent;
 
     //Player reference
-    public GameObject cameraRefTest;
     public GameObject itemsRefTest;
-    #endregion
 
-    #region Irrelevant
     public List<GameObject> collectiblesList;
-
-    #endregion
+   
 
     //Array with game objects 
     public GameObject[] obj;
@@ -63,6 +54,7 @@ public class Overlord : MonoBehaviour
     public AudioSource deathEffect;
 
     public static GameObject refrence;
+    #endregion
 
     //Once a frame...
     private void Update()
@@ -110,7 +102,7 @@ public class Overlord : MonoBehaviour
 
         // ...and then set the collectibles text dependent on items collected.
         winCollectibles.text = "You collected all of the items, and made it home!";
-        loseCollectibles.text = "You collected " + playerRef.collectiblesCollected + "items and didn't make it home...";
+        loseCollectibles.text = "You collected " + (20 - collectiblesList.Count) + " items and didn't make it home...";
 
         #region Hotkeys
         // ...if Esc is pressed...
@@ -157,7 +149,7 @@ public class Overlord : MonoBehaviour
         #endregion 
 
         // ...if player has collected all items...
-        if (playerRef.collectiblesCollected >= 20)
+        if (collectiblesList.Count == 0)
         {
             // ...the game is over.
             levelReferencer.gameOverWin = true;

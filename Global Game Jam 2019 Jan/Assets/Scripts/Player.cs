@@ -12,7 +12,6 @@ public class Player : MonoBehaviour
     public Overlord overlordReference;
     public Spawner spawnerReference;
     public string itemName;
-    public int collectiblesCollected;
     public GameObject itemToRemove;
     //Action Variabless
     public KeyCode moveRight;
@@ -111,6 +110,9 @@ public class Player : MonoBehaviour
         {
             // ...the name of the object collided is stored in a variable...
             itemName = collision.gameObject.name;
+
+            collision.gameObject.SetActive(false);
+
             // ...and then a function in Overlord is run...
             overlordReference.CheckItem();
             // ...then, for every listed item...
@@ -129,8 +131,6 @@ public class Player : MonoBehaviour
             overlordReference.score += 10;
             // ...destroy the collided object...
             Destroy(collision.gameObject);
-            // ...increase the quantity of collectibles obtained...
-            collectiblesCollected++;
             //... and play the collect sound.
             collectEffect.Play();
         }

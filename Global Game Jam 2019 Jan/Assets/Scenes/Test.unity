@@ -4872,10 +4872,9 @@ MonoBehaviour:
   overlordReference: {fileID: 1819694251}
   spawnerReference: {fileID: 1595709851}
   itemName: 
-  collectiblesCollected: 0
   itemToRemove: {fileID: 0}
   moveRight: 100
-  moveLeft: 97
+  moveLeft: 0
   horizontalAxis: Horizontal1
   canJump: 0
   safeZone: 0
@@ -6213,9 +6212,7 @@ MonoBehaviour:
   winFinalScore: {fileID: 1075872362}
   loseFinalScore: {fileID: 706297198}
   playerRef: {fileID: 1554051952}
-  SpawnerRef: {fileID: 0}
   levelReferencer: {fileID: 1819694249}
-  cameraRefTest: {fileID: 984978032}
   itemsRefTest: {fileID: 1610237042}
   collectiblesList:
   - {fileID: 1538775571164302, guid: 0f22ec1687108ce47aeef526e1101e12, type: 2}
