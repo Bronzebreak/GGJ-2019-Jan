@@ -62,8 +62,6 @@ public class backgroundScrolling : MonoBehaviour
         // if the scrolling is false, print in editor
         else if (isScrolling == false)
         {
-            //prints in editor
-            //print("NOT MOVEING");
         }
        
     }

@@ -7,10 +7,7 @@ public class Trigger_Spawner : MonoBehaviour
 	// reference to the trigger prefab
 	public GameObject spawnedItems;
 	// reference to the object that spawns 
-
     public GameObject itemsRefTest;
-    //public float spawnDelay;S
-    //public float delayTimer;
     public Player playerRef;
     private bool canSpawn;
     //float xPosition  = 0;
@@ -51,16 +48,11 @@ public class Trigger_Spawner : MonoBehaviour
         if (playerRef.safeZone == false)
         {
             // ...create an item from the spawnedItems Array at spawner's location, with spawner's quaternion...
-            //Instantiate(spawnedItems[Random.Range(0, spawnedItems.GetLength(0))], newPosition, Quaternion.identity);
-
             // ...and run the function again after the publicly set spawnDelay.ы
-            //Invoke("Spawn", spawnDelay);
             for (int i = 0; i <5; i++) 
             {         
                 Instantiate(spawnedItems, newPosition, Quaternion.identity);
                 newPosition.x +=90.0f;
-                //transform.position = newPosition;
-                //print(newPosition);
             }
         }
     }

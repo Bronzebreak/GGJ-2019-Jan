@@ -13,8 +13,6 @@ public class Destroyer : MonoBehaviour
     public GameObject endLose;
     public GameObject credits;
 
-    //public GameObject[] canvases = new GameObject[5];
-
     public GameObject itemsRefTest;
     
     Vector3 housePosition;
@@ -24,13 +22,7 @@ public class Destroyer : MonoBehaviour
     
     void Start() 
     {
-        /*
-        canvases[0] = menu;
-        canvases[1] = game;
-        canvases[2] = endWin;
-        canvases[3] = endLose;
-        canvases[4] = credits;
-        */
+
     }
 
     //If collision with a trigger occurs...
@@ -38,8 +30,6 @@ public class Destroyer : MonoBehaviour
     {
         if (other.tag == "House")
         {
-            //itemsRefTest.transform.parent = houseSpawnerRef.transform;
-            //itemsRefTest.transform.position = houseSpawnerRef.transform.position;
             housePosition.x += 486;
             housePosition.y = -3.11f;
             itemsRefTest.transform.position = housePosition;
@@ -49,14 +39,7 @@ public class Destroyer : MonoBehaviour
         else if (other.tag == "Player")
         {
             levelReferencer.gameOverLose = true;
-            /*
-            // ...load the 'game over' scene.
-            canvases[0].SetActive(false);
-            canvases[1].SetActive(false);
-            canvases[2].SetActive(false);
-            canvases[3].SetActive(true);
-            canvases[4].SetActive(false);
-            */
+
         }
         
         // ...if it has a parent...

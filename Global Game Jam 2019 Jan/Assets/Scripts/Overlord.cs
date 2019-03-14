@@ -53,10 +53,7 @@ public class Overlord : MonoBehaviour
 
     #region Irrelevant
     public List<GameObject> collectiblesList;
-    //int b = 0;
 
-    //List length
-    //int listLength;
     #endregion
 
     //Array with game objects 
@@ -157,16 +154,6 @@ public class Overlord : MonoBehaviour
 
         #region Irrelevant
         //sets variable to list length
-        //listLength = SpawnerRef.collectiblesList.Count;
-
-
-        //If index goes out of range sets it to 0
-        /*
-        if (b >= (listLength - 1))
-        {
-            b = 0;
-        }
-        */
         #endregion 
 
         // ...if player has collected all items...
@@ -180,33 +167,6 @@ public class Overlord : MonoBehaviour
     //When function is called...
     public void CheckItem()
     {
-        #region
-        /*
-        // ...check list until the end of it...
-        for (int i = 0; i < obj.Length; i++)
-        {
-            // ...go through every element...
-            b = i;
-
-            // ...and if the name matches...
-            if (playerRef.itemName.Contains(obj[i].name))
-            {
-                // ...set the item to active...
-                obj[i].gameObject.SetActive(true);
-
-                // ...then, empty the list element to prevent respawns.
-                SpawnerRef.collectiblesList[b] = null;
-                SpawnerRef.collectiblesList.RemoveAt(b);
-            }
-
-            else
-            {
-                b = i;
-            }
-        }
-
-    */
-        #endregion
         // ...for each collectible in the array...
         foreach (GameObject collectible in obj)
         {

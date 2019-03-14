@@ -7,8 +7,7 @@ public class Tile_Spawner : MonoBehaviour
     public GameObject[] spawnedItems;
     public GameObject spawnerRef;
     public GameObject itemsRefTest;
-    //public float spawnDelay;S
-    //public float delayTimer;
+
     public Player playerRef;
     private bool canSpawn;
     //float xPosition  = 0;
@@ -52,17 +51,15 @@ public class Tile_Spawner : MonoBehaviour
         {
             
             // ...create an item from the spawnedItems Array at spawner's location, with spawner's quaternion...
-            //Instantiate(spawnedItems[Random.Range(0, spawnedItems.GetLength(0))], newPosition, Quaternion.identity);
+            
             
             // ...and run the function again after the publicly set spawnDelay.
-            //Invoke("Spawn", spawnDelay);
+
             for (int i = 0; i <50; i++) 
             {
                 Instantiate(spawnedItems[Random.Range(0, spawnedItems.GetLength(0))], newPosition, Quaternion.identity);
                 newPosition.x +=9.0f;
-                
-                //transform.position = newPosition;
-                //print(newPosition);
+
             }
         }
 
