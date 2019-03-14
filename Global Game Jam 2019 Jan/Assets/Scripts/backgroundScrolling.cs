@@ -6,11 +6,15 @@ public class backgroundScrolling : MonoBehaviour
 {
     //Variables
     Material mat;
-    Vector2 bgOffSet;
 
+    // Background
+    Vector2 bgOffSet;
     public float xVel, yVel;
     public bool isScrolling = false;
-    public Overlord overLord;
+
+    //Script refrences
+    public Overlord overlordRef;
+    public Player playerRef;
 
   
     private void Awake()
@@ -28,19 +32,21 @@ public class backgroundScrolling : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        //if the player is in a safezone, set the scolling to false
-        if (overLord.freezeScore  == true)
+        //if the player is in the safe zone, or the the the player is stopped, stop the scrolling background
+        if (playerRef.safeZone || overlordRef.freezeScore)
         {
-            //sets the scrolling to false
-            isScrolling = true;
-        }
-
-        // if the player is not in th esafe zone, set ht e scrolling to false
-        else if(overLord.freezeScore == false)
-        {
-            //sets the scrolling to ture
+            //sets scrolling background to false
             isScrolling = false;
         }
+
+        // if the player is not in the zone, and the score is not frozen, set the background scrolling to true.
+        if(!playerRef.safeZone && !overlordRef.freezeScore)
+        {
+            //sets the scrolling to true
+            isScrolling = true;
+        }
+       
+
 
 
         //if the scrolling is true, move the background
@@ -57,7 +63,7 @@ public class backgroundScrolling : MonoBehaviour
         else if (isScrolling == false)
         {
             //prints in editor
-            print("NOT MOVEING");
+            //print("NOT MOVEING");
         }
        
     }
