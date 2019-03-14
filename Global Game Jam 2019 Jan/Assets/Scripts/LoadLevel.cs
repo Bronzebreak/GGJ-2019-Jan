@@ -122,7 +122,7 @@ public class LoadLevel : MonoBehaviour
     public void RestartGame()
     {
         // ...load scene of publicly set name 'scene'.
-        SceneManager.LoadScene("Test");
+        SceneManager.LoadScene("Home Run");
     }
 
     //When function is called...
