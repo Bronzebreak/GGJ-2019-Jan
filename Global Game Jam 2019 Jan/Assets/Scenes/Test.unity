@@ -4856,7 +4856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colBlock: {fileID: 1100380453}
-  overlordReference: {fileID: 0}
+  overlordReference: {fileID: 1819694251}
   spawnerReference: {fileID: 1595709851}
   itemName: 
   collectiblesCollected: 0
