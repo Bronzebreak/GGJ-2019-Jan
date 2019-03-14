@@ -3813,7 +3813,8 @@ MonoBehaviour:
   xVel: 0.05
   yVel: 0
   isScrolling: 0
-  overLord: {fileID: 1819694251}
+  overlordRef: {fileID: 1819694251}
+  playerRef: {fileID: 1554051952}
 --- !u!23 &1330784886
 MeshRenderer:
   m_ObjectHideFlags: 0
