@@ -18,10 +18,10 @@ public class Spawner : MonoBehaviour
     }
 
     //Upon collision with a trigger...
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         // ...if I collide with the player...
-        if (col.tag == "Player")
+        if (collision.tag == "Player")
         {
             // ...run coroutine.
             StartCoroutine(SpawnCollectible());

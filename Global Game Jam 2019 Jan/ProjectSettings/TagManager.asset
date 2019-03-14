@@ -6,11 +6,8 @@ TagManager:
   tags:
   - House
   - Collectible
-  - collect
-  - Block
-  - SpawnTrigger
-  - No Jump Zone
   - House Chunk
+  - Ground
   layers:
   - Default
   - TransparentFX

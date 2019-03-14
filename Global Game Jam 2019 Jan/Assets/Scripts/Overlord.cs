@@ -167,7 +167,7 @@ public class Overlord : MonoBehaviour
     public void RestartGame()
     {
         // ...load scene of publicly set name 'scene'.
-        SceneManager.LoadScene("Test");
+        SceneManager.LoadScene("Scene");
     }
 
     //When function is called...
