@@ -96,7 +96,7 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // ...if it has 'home' in its name...
-        if (collision.tag == "House")
+        if (collision.tag == "No Jump Zone")
         {
             // ...player is in a safe zone...
             safeZone = true;
@@ -139,7 +139,7 @@ public class Player : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         // ...if it's home...
-        if (collision.tag == "House")
+        if (collision.tag == "No Jump Zone")
         {
             // ...the player is no longer in a safe zone.
             safeZone = false;

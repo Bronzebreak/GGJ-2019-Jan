@@ -2311,7 +2311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1048167861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2514,7 +2514,19 @@ Prefab:
       propertyPath: m_Name
       value: Chunk_Home
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4762628969894476, guid: c9aaff622999c274885a62e243509aa1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -7.536674
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510451643856226, guid: c9aaff622999c274885a62e243509aa1, type: 2}
+      propertyPath: m_TagString
+      value: No Jump Zone
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 61496614947925086, guid: c9aaff622999c274885a62e243509aa1, type: 2}
+    - {fileID: 61115448926339428, guid: c9aaff622999c274885a62e243509aa1, type: 2}
+    - {fileID: 61671090742591622, guid: c9aaff622999c274885a62e243509aa1, type: 2}
+    - {fileID: 61277534322577992, guid: c9aaff622999c274885a62e243509aa1, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: c9aaff622999c274885a62e243509aa1, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1075872360
